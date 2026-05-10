@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SCALEBUZ - Logo v1: Mark + Wordmark
+  Palette  : Ink #14130F / Oxblood #A8341B / Mute #6E695E
+  Type     : Geist (wordmark) / Geist Mono (sub-label)
+  Dark use : Override logo-ink to #FAF6EC and logo-mute to #9E9688 on a parent element
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 280 56"
+     width="280" height="56"
+     role="img"
+     aria-label="SCALEBUZ — Revenue Architecture">
+  <title>SCALEBUZ</title>
+  <defs>
+    <style>
+      :root {
+        --logo-ink:    #14130F;
+        --logo-accent: #A8341B;
+        --logo-mute:   #6E695E;
+      }
+    </style>
+  </defs>
+
+  <!-- ── Mark ─────────────────────────────────────── -->
+  <!-- Filled circle -->
+  <circle cx="28" cy="28" r="19"
+          fill="var(--logo-ink)"/>
+  <!-- Oxblood diamond: 24px diagonal, centred in circle -->
+  <polygon points="28,16 40,28 28,40 16,28"
+           fill="var(--logo-accent)"/>
+  <!-- Ink centre dot -->
+  <circle cx="28" cy="28" r="3"
+          fill="var(--logo-ink)"/>
+
+  <!-- ── Wordmark ──────────────────────────────────── -->
+  <text
+    x="62" y="36"
+    fill="var(--logo-ink)"
+    font-family="'Geist','Inter','Helvetica Neue',system-ui,sans-serif"
+    font-size="22"
+    font-weight="500"
+    letter-spacing="0.04em"
+    text-rendering="geometricPrecision">SCALEBUZ</text>
+
+  <!-- Thin rule beneath wordmark -->
+  <line x1="62" y1="40" x2="188" y2="40"
+        stroke="var(--logo-mute)" stroke-width="0.6" opacity="0.4"/>
+
+  <!-- ── Sub-label ─────────────────────────────────── -->
+  <text
+    x="63" y="51"
+    fill="var(--logo-mute)"
+    font-family="'Geist Mono','JetBrains Mono',ui-monospace,'Courier New',monospace"
+    font-size="8.5"
+    font-weight="400"
+    letter-spacing="0.2em"
+    text-rendering="geometricPrecision">REVENUE ARCHITECTURE</text>
+
+</svg>

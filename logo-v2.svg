@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  SCALEBUZ - Logo v2: Typographic (no mark)
+  Palette  : Ink #14130F / Oxblood #A8341B (initial S) / Mute #6E695E
+  Type     : Newsreader italic 300 (wordmark) / Geist Mono (sub-label)
+  Dark use : Override logo-ink to #FAF6EC and logo-mute to #9E9688 on a parent element
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 244 72"
+     width="244" height="72"
+     role="img"
+     aria-label="SCALEBUZ — Revenue Architecture">
+  <title>SCALEBUZ</title>
+  <defs>
+    <style>
+      :root {
+        --logo-ink:    #14130F;
+        --logo-accent: #A8341B;
+        --logo-mute:   #6E695E;
+      }
+    </style>
+  </defs>
+
+  <!-- ── Top hairline rule ──────────────────────────── -->
+  <line x1="0" y1="10" x2="244" y2="10"
+        stroke="var(--logo-ink)" stroke-width="0.75"/>
+
+  <!-- ── Wordmark ──────────────────────────────────── -->
+  <!-- "S" in oxblood, "CALEBUZ" in ink — Newsreader italic 300 -->
+  <text
+    x="2" y="55"
+    font-family="'Newsreader','Iowan Old Style','Apple Garamond',Georgia,serif"
+    font-size="44"
+    font-weight="300"
+    font-style="italic"
+    letter-spacing="-0.015em"
+    text-rendering="geometricPrecision">
+    <tspan fill="var(--logo-accent)">S</tspan><tspan fill="var(--logo-ink)">CALEBUZ</tspan>
+  </text>
+
+  <!-- ── Bottom hairline rule ──────────────────────── -->
+  <line x1="0" y1="61" x2="244" y2="61"
+        stroke="var(--logo-ink)" stroke-width="0.75"/>
+
+  <!-- ── Sub-label ─────────────────────────────────── -->
+  <text
+    x="2" y="70"
+    fill="var(--logo-mute)"
+    font-family="'Geist Mono','JetBrains Mono',ui-monospace,'Courier New',monospace"
+    font-size="8"
+    font-weight="400"
+    letter-spacing="0.2em"
+    text-rendering="geometricPrecision">REVENUE ARCHITECTURE</text>
+
+</svg>

@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SCALEBUZ — Logo System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+/* ── Tokens ── */
+:root {
+  --paper:   #ECE7DC;
+  --paper-2: #F4EFE5;
+  --ink:     #14130F;
+  --ink-2:   #2B2823;
+  --mute:    #6E695E;
+  --accent:  #A8341B;
+  --rule:    rgba(20,19,16,.13);
+
+  --sans:  "Geist", -apple-system, system-ui, sans-serif;
+  --mono:  "Geist Mono", "JetBrains Mono", ui-monospace, monospace;
+  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+}
+
+/* ── Dark-context override (passed into inline SVGs via CSS cascade) ── */
+.on-dark {
+  --logo-ink:    #FAF6EC;
+  --logo-mute:   #9E9688;
+  /* accent intentionally unchanged — oxblood reads on dark */
+}
+
+/* ── Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body { font-size: 15px; line-height: 1.55; padding: 0 0 96px; }
+
+/* ── Page header ── */
+.page-header {
+  border-bottom: 1px solid var(--rule);
+  padding: 40px clamp(24px,5vw,72px) 38px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.page-header h1 {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.page-header p {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+/* ── Wrap ── */
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 clamp(24px,5vw,72px);
+}
+
+/* ── Logo section ── */
+.logo-section { padding: 72px 0 0; }
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 40px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--rule);
+}
+.section-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.section-title {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-style: italic;
+  font-size: 22px;
+  letter-spacing: -.01em;
+}
+.section-note {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  color: var(--mute);
+  margin-left: auto;
+}
+
+/* ── Swatch grid ── */
+.swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+@media (max-width: 768px) {
+  .swatch-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Individual swatch ── */
+.swatch {
+  padding: clamp(40px,6vw,72px) clamp(24px,4vw,56px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  min-height: 200px;
+  position: relative;
+}
+.swatch-label {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  opacity: .45;
+}
+
+/* Swatch background variants */
+.bg-paper  { background: #ECE7DC; }
+.bg-white  { background: #FFFFFF; }
+.bg-dark   { background: #14130F; }
+.bg-paper  .swatch-label,
+.bg-white  .swatch-label { color: #14130F; }
+.bg-dark   .swatch-label { color: #FAF6EC; }
+
+/* ── SVG logo sizing inside swatches ── */
+.swatch svg {
+  max-width: 100%;
+  height: auto;
+}
+.logo-large svg  { width: 280px; }
+.logo-medium svg { width: 200px; }
+.logo-small svg  { width: 140px; }
+
+/* ── Scale row (small-size test) ── */
+.scale-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.scale-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.scale-item span {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+.bg-dark .scale-item span { color: #6E695E; }
+
+/* ── Divider ── */
+.divider {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 72px 0 0;
+}
+
+/* ── Notes section ── */
+.notes {
+  padding: 56px 0 0;
+}
+.notes h3 {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--mute);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--rule);
+}
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 32px;
+}
+@media (max-width: 768px) { .notes-grid { grid-template-columns: 1fr; } }
+.note-item h4 {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.note-item p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--mute);
+}
+
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <h1>SCALEBUZ &nbsp;·&nbsp; Logo System</h1>
+  <p>Two options &nbsp;·&nbsp; Light + Dark &nbsp;·&nbsp; May 2026</p>
+</header>
+
+<main class="wrap">
+
+  <!-- ═══ LOGO 1 ═══ -->
+  <section class="logo-section">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <span class="section-title">Mark + Wordmark</span>
+      <span class="section-note">Ink circle · Oxblood diamond · Geist wordmark</span>
+    </div>
+
+    <div class="swatch-grid">
+
+      <!-- Light: bone paper -->
+      <div class="swatch bg-paper">
+        <span class="swatch-label">On paper &nbsp;#ECE7DC</span>
+        <!-- Logo v1 inline, light defaults apply -->
+        <div class="logo-large">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" role="img" aria-label="SCALEBUZ">
+            <style>:root{--logo-ink:#14130F;--logo-accent:#A8341B;--logo-mute:#6E695E}</style>
+            <circle cx="28" cy="28" r="19" fill="var(--logo-ink)"/>
+            <polygon points="28,16 40,28 28,40 16,28" fill="var(--logo-accent)"/>
+            <circle cx="28" cy="28" r="3" fill="var(--logo-ink)"/>
+            <text x="62" y="36" fill="var(--logo-ink)" font-family="'Geist','Inter','Helvetica Neue',system-ui,sans-serif" font-size="22" font-weight="500" letter-spacing="0.04em" text-rendering="geometricPrecision">SCALEBUZ</text>
+            <line x1="62" y1="40" x2="188" y2="40" stroke="var(--logo-mute)" stroke-width="0.6" opacity="0.4"/>
+            <text x="63" y="51" fill="var(--logo-mute)" font-family="'Geist Mono','JetBrains Mono',ui-monospace,monospace" font-size="8.5" font-weight="400" letter-spacing="0.2em" text-rendering="geometricPrecision">REVENUE ARCHITECTURE</text>
+          </svg>
+        </div>
+        <!-- Scale test -->
+        <div class="scale-row">
+          <div class="scale-item">
+            <span>Small</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" width="140">
+              <circle cx="28" cy="28" r="19" fill="var(--logo-ink)"/>
+              <polygon points="28,16 40,28 28,40 16,28" fill="var(--logo-accent)"/>
+              <circle cx="28" cy="28" r="3" fill="var(--logo-ink)"/>
+              <text x="62" y="36" fill="var(--logo-ink)" font-family="'Geist','Inter',system-ui,sans-serif" font-size="22" font-weight="500" letter-spacing="0.04em">SCALEBUZ</text>
+              <text x="63" y="51" fill="var(--logo-mute)" font-family="'Geist Mono',ui-monospace,monospace" font-size="8.5" letter-spacing="0.2em">REVENUE ARCHITECTURE</text>
+            </svg>
+          </div>
+          <div class="scale-item">
+            <span>Mark only</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" width="40">
+              <circle cx="28" cy="28" r="22" fill="var(--logo-ink)"/>
+              <polygon points="28,14 42,28 28,42 14,28" fill="var(--logo-accent)"/>
+              <circle cx="28" cy="28" r="4" fill="var(--logo-ink)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Light: white -->
+      <div class="swatch bg-white">
+        <span class="swatch-label">On white &nbsp;#FFFFFF</span>
+        <div class="logo-large">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" role="img" aria-label="SCALEBUZ">
+            <circle cx="28" cy="28" r="19" fill="#14130F"/>
+            <polygon points="28,16 40,28 28,40 16,28" fill="#A8341B"/>
+            <circle cx="28" cy="28" r="3" fill="#14130F"/>
+            <text x="62" y="36" fill="#14130F" font-family="'Geist','Inter','Helvetica Neue',system-ui,sans-serif" font-size="22" font-weight="500" letter-spacing="0.04em" text-rendering="geometricPrecision">SCALEBUZ</text>
+            <line x1="62" y1="40" x2="188" y2="40" stroke="#6E695E" stroke-width="0.6" opacity="0.4"/>
+            <text x="63" y="51" fill="#6E695E" font-family="'Geist Mono','JetBrains Mono',ui-monospace,monospace" font-size="8.5" font-weight="400" letter-spacing="0.2em" text-rendering="geometricPrecision">REVENUE ARCHITECTURE</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Dark -->
+      <div class="swatch bg-dark on-dark">
+        <span class="swatch-label">On dark &nbsp;#14130F</span>
+        <div class="logo-large">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" role="img" aria-label="SCALEBUZ">
+            <circle cx="28" cy="28" r="19" fill="#FAF6EC"/>
+            <polygon points="28,16 40,28 28,40 16,28" fill="#A8341B"/>
+            <circle cx="28" cy="28" r="3" fill="#FAF6EC"/>
+            <text x="62" y="36" fill="#FAF6EC" font-family="'Geist','Inter','Helvetica Neue',system-ui,sans-serif" font-size="22" font-weight="500" letter-spacing="0.04em" text-rendering="geometricPrecision">SCALEBUZ</text>
+            <line x1="62" y1="40" x2="188" y2="40" stroke="#9E9688" stroke-width="0.6" opacity="0.4"/>
+            <text x="63" y="51" fill="#9E9688" font-family="'Geist Mono','JetBrains Mono',ui-monospace,monospace" font-size="8.5" font-weight="400" letter-spacing="0.2em" text-rendering="geometricPrecision">REVENUE ARCHITECTURE</text>
+          </svg>
+        </div>
+        <div class="scale-row">
+          <div class="scale-item">
+            <span style="color:#6E695E">Mark only</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" width="40">
+              <circle cx="28" cy="28" r="22" fill="#FAF6EC"/>
+              <polygon points="28,14 42,28 28,42 14,28" fill="#A8341B"/>
+              <circle cx="28" cy="28" r="4" fill="#FAF6EC"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ LOGO 2 ═══ -->
+  <section class="logo-section">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <span class="section-title">Typographic</span>
+      <span class="section-note">Newsreader italic · Oxblood initial · Full-bleed rules</span>
+    </div>
+
+    <div class="swatch-grid">
+
+      <!-- Light: bone paper -->
+      <div class="swatch bg-paper">
+        <span class="swatch-label">On paper &nbsp;#ECE7DC</span>
+        <div class="logo-large">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 72" role="img" aria-label="SCALEBUZ">
+            <line x1="0" y1="10" x2="244" y2="10" stroke="#14130F" stroke-width="0.75"/>
+            <text x="2" y="55" font-family="'Newsreader','Iowan Old Style','Apple Garamond',Georgia,serif" font-size="44" font-weight="300" font-style="italic" letter-spacing="-0.015em" text-rendering="geometricPrecision">
+              <tspan fill="#A8341B">S</tspan><tspan fill="#14130F">CALEBUZ</tspan>
+            </text>
+            <line x1="0" y1="61" x2="244" y2="61" stroke="#14130F" stroke-width="0.75"/>
+            <text x="2" y="70" fill="#6E695E" font-family="'Geist Mono','JetBrains Mono',ui-monospace,monospace" font-size="8" font-weight="400" letter-spacing="0.2em" text-rendering="geometricPrecision">REVENUE ARCHITECTURE</text>
+          </svg>
+        </div>
+        <!-- Small scale test -->
+        <div class="scale-row">
+          <div class="scale-item">
+            <span>Small</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 72" width="140">
+              <line x1="0" y1="10" x2="244" y2="10" stroke="#14130F" stroke-width="0.75"/>
+              <text x="2" y="55" font-family="'Newsreader','Iowan Old Style',Georgia,serif" font-size="44" font-weight="300" font-style="italic" letter-spacing="-0.015em">
+                <tspan fill="#A8341B">S</tspan><tspan fill="#14130F">CALEBUZ</tspan>
+              </text>
+              <line x1="0" y1="61" x2="244" y2="61" stroke="#14130F" stroke-width="0.75"/>
+              <text x="2" y="70" fill="#6E695E" font-family="'Geist Mono',ui-monospace,monospace" font-size="8" letter-spacing="0.2em">REVENUE ARCHITECTURE</text>
+            </svg>
+          </div>
+          <div class="scale-item">
+            <span>Word only</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 72" width="140">
+              <text x="2" y="55" font-family="'Newsreader','Iowan Old Style',Georgia,serif" font-size="44" font-weight="300" font-style="italic" letter-spacing="-0.015em">
+                <tspan fill="#A8341B">S</tspan><tspan fill="#14130F">CALEBUZ</tspan>
+              </text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Light: white -->
+      <div class="swatch bg-white">
+        <span class="swatch-label">On white &nbsp;#FFFFFF</span>
+        <div class="logo-large">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 72" role="img" aria-label="SCALEBUZ">
+            <line x1="0" y1="10" x2="244" y2="10" stroke="#14130F" stroke-width="0.75"/>
+            <text x="2" y="55" font-family="'Newsreader','Iowan Old Style','Apple Garamond',Georgia,serif" font-size="44" font-weight="300" font-style="italic" letter-spacing="-0.015em" text-rendering="geometricPrecision">
+              <tspan fill="#A8341B">S</tspan><tspan fill="#14130F">CALEBUZ</tspan>
+            </text>
+            <line x1="0" y1="61" x2="244" y2="61" stroke="#14130F" stroke-width="0.75"/>
+            <text x="2" y="70" fill="#6E695E" font-family="'Geist Mono','JetBrains Mono',ui-monospace,monospace" font-size="8" font-weight="400" letter-spacing="0.2em" text-rendering="geometricPrecision">REVENUE ARCHITECTURE</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Dark -->
+      <div class="swatch bg-dark on-dark">
+        <span class="swatch-label">On dark &nbsp;#14130F</span>
+        <div class="logo-large">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 72" role="img" aria-label="SCALEBUZ">
+            <line x1="0" y1="10" x2="244" y2="10" stroke="#FAF6EC" stroke-width="0.75"/>
+            <text x="2" y="55" font-family="'Newsreader','Iowan Old Style','Apple Garamond',Georgia,serif" font-size="44" font-weight="300" font-style="italic" letter-spacing="-0.015em" text-rendering="geometricPrecision">
+              <tspan fill="#A8341B">S</tspan><tspan fill="#FAF6EC">CALEBUZ</tspan>
+            </text>
+            <line x1="0" y1="61" x2="244" y2="61" stroke="#FAF6EC" stroke-width="0.75"/>
+            <text x="2" y="70" fill="#9E9688" font-family="'Geist Mono','JetBrains Mono',ui-monospace,monospace" font-size="8" font-weight="400" letter-spacing="0.2em" text-rendering="geometricPrecision">REVENUE ARCHITECTURE</text>
+          </svg>
+        </div>
+        <div class="scale-row">
+          <div class="scale-item">
+            <span style="color:#6E695E">Word only</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 72" width="140">
+              <text x="2" y="55" font-family="'Newsreader','Iowan Old Style',Georgia,serif" font-size="44" font-weight="300" font-style="italic" letter-spacing="-0.015em">
+                <tspan fill="#A8341B">S</tspan><tspan fill="#FAF6EC">CALEBUZ</tspan>
+              </text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ SIDE-BY-SIDE COMPARISON ═══ -->
+  <hr class="divider">
+
+  <section class="logo-section">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <span class="section-title">Side-by-side at rest</span>
+      <span class="section-note">Both options at working scale</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;">
+
+      <div class="swatch bg-paper" style="align-items:center;min-height:160px;">
+        <span class="swatch-label">Logo 01</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" width="240" role="img" aria-label="SCALEBUZ">
+          <circle cx="28" cy="28" r="19" fill="#14130F"/>
+          <polygon points="28,16 40,28 28,40 16,28" fill="#A8341B"/>
+          <circle cx="28" cy="28" r="3" fill="#14130F"/>
+          <text x="62" y="36" fill="#14130F" font-family="'Geist','Inter',system-ui,sans-serif" font-size="22" font-weight="500" letter-spacing="0.04em" text-rendering="geometricPrecision">SCALEBUZ</text>
+          <line x1="62" y1="40" x2="188" y2="40" stroke="#6E695E" stroke-width="0.6" opacity="0.4"/>
+          <text x="63" y="51" fill="#6E695E" font-family="'Geist Mono',ui-monospace,monospace" font-size="8.5" letter-spacing="0.2em" text-rendering="geometricPrecision">REVENUE ARCHITECTURE</text>
+        </svg>
+      </div>
+
+      <div class="swatch bg-paper" style="align-items:center;min-height:160px;">
+        <span class="swatch-label">Logo 02</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 72" width="220" role="img" aria-label="SCALEBUZ">
+          <line x1="0" y1="10" x2="244" y2="10" stroke="#14130F" stroke-width="0.75"/>
+          <text x="2" y="55" font-family="'Newsreader','Iowan Old Style',Georgia,serif" font-size="44" font-weight="300" font-style="italic" letter-spacing="-0.015em" text-rendering="geometricPrecision">
+            <tspan fill="#A8341B">S</tspan><tspan fill="#14130F">CALEBUZ</tspan>
+          </text>
+          <line x1="0" y1="61" x2="244" y2="61" stroke="#14130F" stroke-width="0.75"/>
+          <text x="2" y="70" fill="#6E695E" font-family="'Geist Mono',ui-monospace,monospace" font-size="8" letter-spacing="0.2em" text-rendering="geometricPrecision">REVENUE ARCHITECTURE</text>
+        </svg>
+      </div>
+
+      <div class="swatch bg-dark on-dark" style="align-items:center;min-height:160px;">
+        <span class="swatch-label">Logo 01 — Dark</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56" width="240" role="img" aria-label="SCALEBUZ">
+          <circle cx="28" cy="28" r="19" fill="#FAF6EC"/>
+          <polygon points="28,16 40,28 28,40 16,28" fill="#A8341B"/>
+          <circle cx="28" cy="28" r="3" fill="#FAF6EC"/>
+          <text x="62" y="36" fill="#FAF6EC" font-family="'Geist','Inter',system-ui,sans-serif" font-size="22" font-weight="500" letter-spacing="0.04em" text-rendering="geometricPrecision">SCALEBUZ</text>
+          <line x1="62" y1="40" x2="188" y2="40" stroke="#9E9688" stroke-width="0.6" opacity="0.4"/>
+          <text x="63" y="51" fill="#9E9688" font-family="'Geist Mono',ui-monospace,monospace" font-size="8.5" letter-spacing="0.2em" text-rendering="geometricPrecision">REVENUE ARCHITECTURE</text>
+        </svg>
+      </div>
+
+      <div class="swatch bg-dark on-dark" style="align-items:center;min-height:160px;">
+        <span class="swatch-label">Logo 02 — Dark</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 244 72" width="220" role="img" aria-label="SCALEBUZ">
+          <line x1="0" y1="10" x2="244" y2="10" stroke="#FAF6EC" stroke-width="0.75"/>
+          <text x="2" y="55" font-family="'Newsreader','Iowan Old Style',Georgia,serif" font-size="44" font-weight="300" font-style="italic" letter-spacing="-0.015em" text-rendering="geometricPrecision">
+            <tspan fill="#A8341B">S</tspan><tspan fill="#FAF6EC">CALEBUZ</tspan>
+          </text>
+          <line x1="0" y1="61" x2="244" y2="61" stroke="#FAF6EC" stroke-width="0.75"/>
+          <text x="2" y="70" fill="#9E9688" font-family="'Geist Mono',ui-monospace,monospace" font-size="8" letter-spacing="0.2em" text-rendering="geometricPrecision">REVENUE ARCHITECTURE</text>
+        </svg>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ USAGE NOTES ═══ -->
+  <hr class="divider">
+
+  <section class="notes">
+    <h3>Usage guidance</h3>
+    <div class="notes-grid">
+      <div class="note-item">
+        <h4>Logo 01 — Use when</h4>
+        <p>The mark + wordmark combination works best in the website nav, email signatures, presentations, and anywhere a recognisable visual symbol is useful alongside the name. The ink circle with the oxblood diamond creates a compact, strong favicon and app-icon candidate.</p>
+      </div>
+      <div class="note-item">
+        <h4>Logo 02 — Use when</h4>
+        <p>The typographic logo works best in editorial contexts: PDF report headers, proposal cover pages, LinkedIn banners, and anywhere the serif typeface reinforces the advisory-firm positioning. The hairline rules above and below give it a masthead quality. The oxblood S distinguishes it from a plain wordmark.</p>
+      </div>
+      <div class="note-item">
+        <h4>Colour rules</h4>
+        <p>On light backgrounds (paper, white): ink mark, ink text, muted sub-label.<br><br>On dark backgrounds: swap ink → <span style="font-family:'Geist Mono',monospace;font-size:11px">#FAF6EC</span>. Oxblood accent stays unchanged on both. Never use the dark-bg logo on a light surface.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

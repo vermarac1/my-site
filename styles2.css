@@ -1852,6 +1852,8 @@ html { scroll-padding-top: 88px; }
 
   /* Engagement tier — single column */
   .tier { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .tier h3 br { display: none; }
+  .tier h3 em { margin-left: .3em; }
 
   /* Sectors strip can break */
   .sectors { gap: 12px; row-gap: 8px; }

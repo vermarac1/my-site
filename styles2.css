@@ -770,7 +770,13 @@ main { padding-top: 92px; }
     align-items: center;
     gap: 14px;
   }
-  .flow-break-mark { order: 1; }
+  .flow-break-mark {
+    order: 1;
+    width: 8px;
+    height: 8px;
+    margin-left: 1.5px;
+    box-shadow: 0 0 0 4px var(--paper-2), 0 0 14px var(--accent-glow);
+  }
   .flow-break-lbl { position: static; transform: none; order: 2; margin-left: 0; }
   .flow-pulse { display: none; }
 }

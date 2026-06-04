@@ -700,11 +700,14 @@ main { padding-top: 92px; }
   color: var(--mute);
   max-width: 15ch;
 }
-/* the leak: rust diamond breaking the line, annotated */
+/* the leak: rust diamond breaking the line, annotated.
+   Lives inside .flow-nodes (position:relative) as the 4th item; on desktop it is
+   taken out of grid flow and pinned to the line centre, so the 6 nodes still fill
+   6 columns. On mobile it becomes a normal grid row between node 03 and 04. */
 .flow-break {
   position: absolute;
   left: 50%;
-  top: 33px;
+  top: 5px;
   transform: translate(-50%, -50%);
   z-index: 2;
   display: flex;
@@ -765,7 +768,6 @@ main { padding-top: 92px; }
   .flow-break {
     position: static;
     transform: none;
-    margin-top: 22px;
     flex-direction: row;
     align-items: center;
     gap: 14px;

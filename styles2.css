@@ -762,8 +762,16 @@ main { padding-top: 92px; }
   .flow-nodes { grid-template-columns: 1fr; gap: 22px; }
   .flow-node { flex-direction: row; align-items: center; text-align: left; gap: 14px; padding: 0; }
   .flow-node .lbl { max-width: none; }
-  .flow-break { left: 5px; top: 50%; flex-direction: row; }
-  .flow-break-lbl { position: static; transform: none; margin-left: 16px; }
+  .flow-break {
+    position: static;
+    transform: none;
+    margin-top: 22px;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+  }
+  .flow-break-mark { order: 1; }
+  .flow-break-lbl { position: static; transform: none; order: 2; margin-left: 0; }
   .flow-pulse { display: none; }
 }
 

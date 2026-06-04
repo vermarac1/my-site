@@ -874,13 +874,11 @@
 
       var fd = new FormData(leadForm);
       fd.set('subject', 'New diagnostic request — ' + el['company'].value.trim());
-      var payload = {};
-      fd.forEach(function (v, k) { payload[k] = v; });
 
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(payload)
+        headers: { 'Accept': 'application/json' },
+        body: fd
       })
         .then(function (r) { return r.json(); })
         .then(function (data) {

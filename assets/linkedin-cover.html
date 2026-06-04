@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>ScaleBuz — LinkedIn Cover</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #ECE7DC;
+    --ink:   #14130F;
+    --mute:  #6E695E;
+    --accent:#A8341B;
+    --display: "Newsreader", "Iowan Old Style", Georgia, serif;
+    --sans:    "Geist", -apple-system, system-ui, sans-serif;
+    --mono:    "Geist Mono", ui-monospace, monospace;
+  }
+  *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0 }
+  html,body{
+    width:1584px; height:396px;
+    background:var(--paper);
+    font-family:var(--sans);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow:hidden;
+    position:relative;
+  }
+
+  /* Top-right eyebrow: oxblood diamond pip + 2-line mono caps */
+  .eyebrow{
+    position:absolute;
+    top:60px;
+    right:96px;
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    font-family:var(--mono);
+    font-size:13px;
+    font-weight:500;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--accent);
+    line-height:1.5;
+  }
+  .eyebrow .pip{
+    width:7px; height:7px;
+    background:var(--accent);
+    transform:rotate(45deg);
+    margin-top:6px;
+    flex:0 0 auto;
+  }
+  .eyebrow .words{
+    display:flex;
+    flex-direction:column;
+    text-align:left;
+  }
+
+  /* Headline — Newsreader display, right-aligned, italic+oxblood on "architecture" */
+  .headline{
+    position:absolute;
+    top:118px;
+    right:96px;
+    max-width:1100px;
+    font-family:var(--display);
+    font-weight:300;
+    font-size:92px;
+    line-height:1.02;
+    letter-spacing:-0.025em;
+    color:var(--ink);
+    text-align:right;
+  }
+  .headline em{
+    font-style:italic;
+    font-weight:400;
+    color:var(--accent);
+  }
+
+  /* Bottom-right URL — mono caps, muted */
+  .url{
+    position:absolute;
+    bottom:60px;
+    right:96px;
+    font-family:var(--mono);
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--mute);
+  }
+</style>
+</head>
+<body>
+
+  <div class="eyebrow">
+    <span class="pip" aria-hidden="true"></span>
+    <span class="words">
+      <span>Revenue</span>
+      <span>Architecture</span>
+    </span>
+  </div>
+
+  <h1 class="headline">
+    Pipeline is an<br/>
+    <em>architecture</em> problem.
+  </h1>
+
+  <div class="url">scalebuz.co</div>
+
+</body>
+</html>

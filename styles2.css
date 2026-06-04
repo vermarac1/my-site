@@ -1480,6 +1480,74 @@ details.faq .a {
 .section--cta .btn-ghost { color: var(--paper-3); border-color: rgba(255,255,255,.16); }
 .section--cta .btn-ghost:hover { border-color: var(--paper-3); }
 .cta-lede { font-family: var(--display); font-style: italic; font-weight: 300; font-size: clamp(20px,1.8vw,26px); line-height: 1.4; color: #bdb6a3; }
+
+/* ── Lead form (right column of final CTA): mirrors the contact panel rhythm ── */
+.cta-form-wrap { border-top: 1px solid rgba(255,255,255,.12); padding-top: 32px; }
+.cta-form { display: grid; gap: 0; }
+.cta-form-head {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(19px, 1.7vw, 24px);
+  line-height: 1.2;
+  color: var(--paper-3);
+  margin-bottom: 6px;
+}
+.cta-form .field {
+  display: grid;
+  gap: 6px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.cta-form .field .k {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #857d6a;
+  transition: color .2s ease;
+}
+.cta-form .inp {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  color: #f1ece0;
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.45;
+  padding: 1px 0;
+  outline: none;
+}
+.cta-form .inp::placeholder { color: #6f6757; }
+.cta-form .field:focus-within { border-bottom-color: rgba(255,255,255,.34); }
+.cta-form .field:focus-within .k { color: #b6ad98; }
+.cta-form .field.invalid { border-bottom-color: #b8543a; }
+.cta-form .field.invalid .k { color: #c86a52; }
+.cta-form .field-err {
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: .01em;
+  color: #d08a76;
+  display: none;
+}
+.cta-form .field.invalid .field-err { display: block; }
+.cta-form-btn { margin-top: 26px; width: -moz-fit-content; width: fit-content; min-height: 44px; }
+.cta-form-note { margin-top: 16px; font-family: var(--sans); font-size: 13px; line-height: 1.5; color: var(--mute); }
+.cta-form-status { margin-top: 14px; font-family: var(--sans); font-size: 14px; line-height: 1.55; display: none; }
+.cta-form-status.show { display: block; }
+.cta-form-status.ok { color: #9bb098; }
+.cta-form-status.err { color: #d08a76; }
+.cta-form.sent .field,
+.cta-form.sent .cta-form-btn,
+.cta-form.sent .cta-form-note,
+.cta-form.sent .cta-form-head { display: none; }
+.cta-form .inp:-webkit-autofill,
+.cta-form .inp:-webkit-autofill:hover,
+.cta-form .inp:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f1ece0;
+  -webkit-box-shadow: 0 0 0 1000px var(--ink) inset;
+  caret-color: #f1ece0;
+}
 @media (max-width: 880px) { .cta-grid { grid-template-columns: 1fr; } }
 
 /* ── FOOTER ── */

@@ -656,11 +656,43 @@
         </div>
       </div>
 
-      <aside class="cta-contact reveal" aria-label="Contact details">
-        <div class="row"><div class="k">Email</div><div class="v"><a href="mailto:rachit@scalebuz.co">rachit@scalebuz.co</a></div></div>
-        <div class="row"><div class="k">Direct</div><div class="v">+91 9958978720</div></div>
-        <div class="row"><div class="k">Based</div><div class="v">India · Global delivery</div></div>
-        <div class="row" style="border-bottom:0"><div class="k">Coverage</div><div class="v">India · UK · North America · Europe</div></div>
+      <aside class="cta-form-wrap reveal" aria-label="Request a diagnostic call">
+        <form class="cta-form" id="leadForm" action="https://formsubmit.co/rachit@scalebuz.co" method="POST" novalidate>
+          <p class="cta-form-head">Request your diagnostic call.</p>
+          <div class="field">
+            <label class="k" for="lf-name">Name</label>
+            <input class="inp" id="lf-name" name="name" type="text" autocomplete="name" required>
+            <span class="field-err">Required</span>
+          </div>
+          <div class="field">
+            <label class="k" for="lf-company">Company name</label>
+            <input class="inp" id="lf-company" name="company" type="text" autocomplete="organization" required>
+            <span class="field-err">Required</span>
+          </div>
+          <div class="field">
+            <label class="k" for="lf-title">Job title</label>
+            <input class="inp" id="lf-title" name="job_title" type="text" autocomplete="organization-title" required>
+            <span class="field-err">Required</span>
+          </div>
+          <div class="field">
+            <label class="k" for="lf-phone">Phone number</label>
+            <input class="inp" id="lf-phone" name="phone" type="tel" autocomplete="tel" required>
+            <span class="field-err">Enter a valid phone number</span>
+          </div>
+          <div class="field">
+            <label class="k" for="lf-email">Official email</label>
+            <input class="inp" id="lf-email" name="email" type="email" autocomplete="email" required>
+            <span class="field-err">Use your work email</span>
+          </div>
+          <input type="hidden" name="_subject" value="New diagnostic request — scalebuz.co">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://scalebuz.co/?submitted=1">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+          <button class="btn btn-primary cta-form-btn" type="submit" data-magnetic>Send request <span class="arr">→</span></button>
+          <p class="cta-form-note">Rachit replies personally, usually within one business day.</p>
+          <p class="cta-form-status" id="lf-status" role="status" aria-live="polite"></p>
+        </form>
       </aside>
     </div>
   </div>
@@ -703,6 +735,7 @@
         <h6>Direct</h6>
         <ul>
           <li><a href="mailto:rachit@scalebuz.co" style="color:var(--accent)">rachit@scalebuz.co</a></li>
+          <li><a href="tel:+919958978720">+91 9958978720</a></li>
           <li><a href="https://calendly.com/vermarac1" target="_blank" rel="noopener">Book the diagnostic call →</a></li>
           <li><a href="#engagements">See consulting engagements →</a></li>
           <li><a href="#services">See targeted services →</a></li>
@@ -782,6 +815,93 @@
   } else {
     document.querySelectorAll('.reveal').forEach(function (el) {
       el.classList.add('visible');
+    });
+  }
+
+  // ── Lead form: validation + submit, notifies rachit@scalebuz.co ──
+  var leadForm = document.getElementById('leadForm');
+  if (leadForm) {
+    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    var FREE_EMAIL = /@(gmail|googlemail|yahoo|ymail|rocketmail|hotmail|outlook|live|msn|aol|icloud|me|mac|proton|protonmail|gmx|yandex|mail|rediffmail|inbox|zohomail)\./i;
+    var statusEl = document.getElementById('lf-status');
+
+    function fieldOf(input) { return input.closest('.field'); }
+    function setError(input, msg) {
+      var f = fieldOf(input);
+      f.classList.add('invalid');
+      var err = f.querySelector('.field-err');
+      if (err && msg) err.textContent = msg;
+    }
+    function clearErrors() {
+      leadForm.querySelectorAll('.field.invalid').forEach(function (f) { f.classList.remove('invalid'); });
+      statusEl.className = 'cta-form-status';
+      statusEl.textContent = '';
+    }
+
+    leadForm.addEventListener('input', function (e) {
+      var f = e.target.closest ? e.target.closest('.field') : null;
+      if (f) f.classList.remove('invalid');
+    });
+
+    leadForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      clearErrors();
+      var el = leadForm.elements;
+      var ok = true;
+
+      ['name', 'company', 'job_title'].forEach(function (n) {
+        if (!el[n].value.trim()) { setError(el[n], 'Required'); ok = false; }
+      });
+
+      var phone = el['phone'].value.trim();
+      if (!phone) { setError(el['phone'], 'Required'); ok = false; }
+      else if (phone.replace(/[^0-9]/g, '').length < 7) { setError(el['phone'], 'Enter a valid phone number'); ok = false; }
+
+      var email = el['email'].value.trim();
+      if (!email) { setError(el['email'], 'Required'); ok = false; }
+      else if (!EMAIL_RE.test(email)) { setError(el['email'], 'Enter a valid email'); ok = false; }
+      else if (FREE_EMAIL.test(email)) { setError(el['email'], 'Use your work email'); ok = false; }
+
+      if (!ok) {
+        var firstBad = leadForm.querySelector('.field.invalid .inp');
+        if (firstBad) firstBad.focus();
+        return;
+      }
+
+      var btn = leadForm.querySelector('.cta-form-btn');
+      var btnHTML = btn.innerHTML;
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      var fd = new FormData(leadForm);
+      fd.set('_subject', 'New diagnostic request — ' + el['company'].value.trim());
+      var payload = {};
+      fd.forEach(function (v, k) { payload[k] = v; });
+
+      fetch('https://formsubmit.co/ajax/rachit@scalebuz.co', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data && (data.success === true || data.success === 'true')) {
+            leadForm.classList.add('sent');
+            statusEl.className = 'cta-form-status show ok';
+            statusEl.textContent = 'Thank you. Your details are with Rachit. Expect a reply within one business day.';
+          } else {
+            btn.disabled = false;
+            btn.innerHTML = btnHTML;
+            statusEl.className = 'cta-form-status show err';
+            statusEl.textContent = 'We could not send that just now. Please email rachit@scalebuz.co directly.';
+          }
+        })
+        .catch(function () {
+          btn.disabled = false;
+          btn.innerHTML = btnHTML;
+          statusEl.className = 'cta-form-status show err';
+          statusEl.textContent = 'Something went wrong. Please email rachit@scalebuz.co directly.';
+        });
     });
   }
 

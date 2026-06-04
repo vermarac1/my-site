@@ -657,7 +657,7 @@
       </div>
 
       <aside class="cta-form-wrap reveal" aria-label="Request a diagnostic call">
-        <form class="cta-form" id="leadForm" action="https://formsubmit.co/rachit@scalebuz.co" method="POST" novalidate>
+        <form class="cta-form" id="leadForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
           <p class="cta-form-head">Request your diagnostic call.</p>
           <div class="field">
             <label class="k" for="lf-name">Name</label>
@@ -684,11 +684,10 @@
             <input class="inp" id="lf-email" name="email" type="email" autocomplete="email" required>
             <span class="field-err">Use your work email</span>
           </div>
-          <input type="hidden" name="_subject" value="New diagnostic request — scalebuz.co">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://scalebuz.co/?submitted=1">
-          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+          <input type="hidden" name="access_key" value="42038573-b698-4bcb-8cca-5e63d3dbfee6">
+          <input type="hidden" name="subject" value="New diagnostic request — scalebuz.co">
+          <input type="hidden" name="from_name" value="ScaleBuz website">
+          <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="display:none">
           <button class="btn btn-primary cta-form-btn" type="submit" data-magnetic>Send request <span class="arr">→</span></button>
           <p class="cta-form-note">Rachit replies personally, usually within one business day.</p>
           <p class="cta-form-status" id="lf-status" role="status" aria-live="polite"></p>
@@ -874,11 +873,11 @@
       btn.textContent = 'Sending…';
 
       var fd = new FormData(leadForm);
-      fd.set('_subject', 'New diagnostic request — ' + el['company'].value.trim());
+      fd.set('subject', 'New diagnostic request — ' + el['company'].value.trim());
       var payload = {};
       fd.forEach(function (v, k) { payload[k] = v; });
 
-      fetch('https://formsubmit.co/ajax/rachit@scalebuz.co', {
+      fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(payload)

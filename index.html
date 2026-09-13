@@ -1,13 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script>
+  document.documentElement.classList.add('js');
+  /* If site.js never runs, drop the hidden animation states so nothing stays invisible */
+  setTimeout(function () { if (!window.__sb) { document.documentElement.classList.remove('js'); } }, 2500);
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7X4S9LFZZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-R7X4S9LFZZ');
 </script>
 <!-- Leadfeeder (Dealfront) tracker -->
@@ -22,909 +29,560 @@
 </script>
 <!-- RB2B (reb2b) visitor identification -->
 <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("9NMMZHRJ3YNW");</script>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<script>document.documentElement.classList.add('js');</script>
-<title>ScaleBuz · Revenue Architecture for B2B SaaS</title>
-<meta name="description" content="ScaleBuz diagnoses why B2B SaaS pipeline is stalling and rebuilds the GTM architecture to fix it. Fixed-scope engagements. Senior involvement throughout.">
-<meta property="og:title" content="ScaleBuz · Revenue Architecture for B2B SaaS">
-<meta property="og:description" content="We diagnose where qualified demand breaks. Then we rebuild the architecture inside the tools your team already uses.">
+
+<title>ScaleBuz | B2B Marketing &amp; Growth Advisory. Rachit Verma</title>
+<meta name="description" content="Something in your marketing isn't working. Let's figure out what. Rachit Verma helps B2B founders and marketing leaders diagnose what is holding growth back, then builds the system to fix it. Free 30 to 45 minute Marketing Growth Diagnostic.">
+<link rel="canonical" href="https://www.scalebuz.co/">
+
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://scalebuz.co">
+<meta property="og:url" content="https://www.scalebuz.co/">
+<meta property="og:site_name" content="ScaleBuz">
+<meta property="og:title" content="ScaleBuz | B2B Marketing &amp; Growth Advisory. Rachit Verma">
+<meta property="og:description" content="Something in your marketing isn't working. Let's figure out what. Diagnosis before spend, for B2B technology companies. Free Marketing Growth Diagnostic with Rachit Verma.">
+<meta property="og:image" content="https://www.scalebuz.co/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ScaleBuz by Rachit Verma. Something in your marketing isn't working. Let's figure out what.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.scalebuz.co/assets/og-image.png">
+<meta name="twitter:title" content="ScaleBuz | B2B Marketing &amp; Growth Advisory. Rachit Verma">
+<meta name="twitter:description" content="Something in your marketing isn't working. Let's figure out what. Free Marketing Growth Diagnostic with Rachit Verma.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles2.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%2314130F'/><polygon points='16,7 25,16 16,25 7,16' fill='%23A8341B'/><circle cx='16' cy='16' r='4' fill='%2314130F'/></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Geist:wght@300;400;500&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%2314130F'/><polygon points='16,7 25,16 16,25 7,16' fill='%230B6B50'/><circle cx='16' cy='16' r='4' fill='%2314130F'/></svg>">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://www.scalebuz.co/#scalebuz",
+      "name": "ScaleBuz",
+      "url": "https://www.scalebuz.co/",
+      "description": "B2B marketing and growth advisory. Diagnoses what is holding growth back for B2B technology companies, then builds the system to fix it.",
+      "email": "rachit@scalebuz.co",
+      "areaServed": "Worldwide",
+      "founder": { "@id": "https://www.scalebuz.co/#rachit" },
+      "provider": { "@id": "https://www.scalebuz.co/#rachit" },
+      "address": { "@type": "PostalAddress", "addressRegion": "Delhi NCR", "addressCountry": "IN" },
+      "knowsAbout": ["Positioning","Go-to-market strategy","Demand generation","Pipeline architecture","Product marketing","Sales enablement","Conversion rate optimisation","Marketing operations"]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.scalebuz.co/#rachit",
+      "name": "Rachit Verma",
+      "jobTitle": "Founder and Principal Consultant",
+      "image": "https://www.scalebuz.co/assets/rachit-avatar.jpg",
+      "worksFor": { "@id": "https://www.scalebuz.co/#scalebuz" },
+      "sameAs": ["https://www.linkedin.com/in/rachitverma1/"],
+      "knowsAbout": ["B2B go-to-market strategy","Demand generation","Positioning","Product marketing","Sales enablement","Pipeline architecture","AI-enabled marketing"],
+      "alumniOf": [
+        { "@type": "EducationalOrganization", "name": "Indian School of Business" },
+        { "@type": "EducationalOrganization", "name": "Anglia Ruskin University" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.scalebuz.co/#diagnostic",
+      "name": "Marketing Growth Diagnostic",
+      "serviceType": "B2B marketing and growth diagnosis",
+      "provider": { "@id": "https://www.scalebuz.co/#rachit" },
+      "description": "A 30 to 45 minute conversation covering business, growth objective, market, buyer, positioning, GTM, demand, funnel, sales alignment and measurement. Ends with one specific observation about the likely constraint.",
+      "areaServed": "Worldwide"
+    }
+  ]
+}
+</script>
+<script src="site.js" defer></script>
 </head>
 <body>
 
-<!-- ═══ NAV ═══ -->
+<a class="skip" href="#main">Skip to content</a>
+
 <header class="nav" id="nav">
-  <div class="nav-inner">
-    <a class="brand" href="#top" aria-label="ScaleBuz">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" height="34" aria-hidden="true" focusable="false" style="flex-shrink:0;display:block">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="ScaleBuz home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" aria-hidden="true" focusable="false">
         <circle cx="25" cy="25" r="22" fill="#14130F"/>
-        <polygon points="25,10 38,25 25,40 12,25" fill="#A8341B"/>
+        <polygon points="25,10 38,25 25,40 12,25" class="mark"/>
         <circle cx="25" cy="25" r="4" fill="#14130F"/>
       </svg>
-      <div class="brand-name">ScaleBuz</div>
+      <span class="brand-t">
+        <span class="brand-n">ScaleBuz</span>
+        <span class="brand-s">by Rachit Verma</span>
+      </span>
     </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#diagnosis">Diagnosis</a>
-      <a href="#who">Who it's for</a>
-      <a href="#engagements">Consulting</a>
-      <a href="#services">Services</a>
-      <a href="#cases">Case Files</a>
-      <a href="#team">Team</a>
-      <a href="#faq">FAQ</a>
-      <a href="#cta">Contact</a>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#thinking">How I Think</a>
+      <a href="#method">How I Work</a>
+      <a href="#operator">About</a>
+      <a class="btn btn--sm" href="diagnostic.html" data-cta="nav">Tell me what's not working <span class="ar">&rarr;</span></a>
     </nav>
-    <a class="btn btn-primary nav-btn-desktop" href="https://calendly.com/vermarac1" target="_blank" rel="noopener">Book the diagnostic call <span class="arr">→</span></a>
-    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-mobile" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
+    <button class="nav-tog" id="nav-tog" type="button" aria-expanded="false" aria-controls="nav-links">
+      <span class="nav-tog-l">Menu</span><span class="bars" aria-hidden="true"><i></i><i></i></span>
     </button>
   </div>
 </header>
 
-<!-- ═══ MOBILE NAV ═══ -->
-<div class="nav-mobile" id="nav-mobile" aria-hidden="true">
-  <nav class="nav-mobile-links" aria-label="Mobile navigation">
-    <a href="#diagnosis">Diagnosis</a>
-    <a href="#who">Who it's for</a>
-    <a href="#engagements">Consulting</a>
-    <a href="#services">Services</a>
-    <a href="#cases">Case Files</a>
-    <a href="#team">Team</a>
-    <a href="#faq">FAQ</a>
-    <a href="#cta">Contact</a>
-  </nav>
-  <a class="btn btn-primary" data-magnetic href="https://calendly.com/vermarac1" target="_blank" rel="noopener">Book the diagnostic call <span class="arr">→</span></a>
-</div>
+<main id="main">
 
-<main id="top">
-
-<!-- ═══ HERO ═══ -->
-<section class="section hero">
-  <div class="hero-backdrop" aria-hidden="true"></div>
+<!-- ══ 01 HERO ══════════════════════════════════════════════ -->
+<section class="hero" id="top">
   <div class="wrap">
-
-    <h1 class="display-1 reveal">
-      Your pipeline is not an <span class="softer">execution problem.</span><br>It is an <em>architecture</em> problem.
+    <p class="eyebrow hero-in" style="--i:0">B2B Marketing &amp; Growth Advisory</p>
+    <h1>
+      <span class="ln"><span style="--i:1">Something in your marketing isn't working.</span></span>
+      <span class="ln"><span class="accent" style="--i:2">Let's figure out what.</span></span>
     </h1>
+    <p class="lede hero-in" style="--i:3">I help B2B founders and marketing leaders diagnose what's holding growth back, then build the system to fix it.</p>
+    <div class="hero-cta hero-in" style="--i:4">
+      <a class="btn" href="diagnostic.html" data-cta="hero">Tell me what's not working <span class="ar">&rarr;</span></a>
+      <a class="link" href="#work">See the work</a>
+    </div>
+    <p class="cred hero-in" style="--i:5">
+      <span><b>15+ years</b> in B2B</span>
+      <span><b>4</b> marketing functions built from zero</span>
+      <span><b>$250K</b> demand budget owned</span>
+    </p>
+  </div>
+</section>
 
-    <div class="hero-grid reveal">
+<!-- ══ 02 SYMPTOMS ══════════════════════════════════════════ -->
+<section class="s-alt" id="symptoms">
+  <div class="wrap">
+    <div class="head head--solo rv">
       <div>
-        <p class="lede">
-          Most B2B SaaS companies have already tried the obvious fixes. More content, more channels, a new agency, a fractional CMO. The pipeline still does not move. Because the problem is not what you are doing. It is the GTM system underneath. We diagnose where qualified demand is breaking, then rebuild the architecture inside the stack your team already operates.
-        </p>
-        <div class="hero-cta" style="margin-top:28px">
-          <a class="btn btn-primary" data-magnetic href="#engagements">See consulting engagements <span class="arr">→</span></a>
-          <a class="btn btn-ghost" href="#services">See targeted services <span class="arr">→</span></a>
-        </div>
+        <p class="eyebrow">The symptom</p>
+        <h2>You know the symptom. The problem is usually somewhere else.</h2>
       </div>
+    </div>
+    <ul class="sym" data-stagger>
+      <li><span class="q">&ldquo;Leads are down.&rdquo;</span><span class="a"><b>Maybe it isn't demand.</b> The market may not understand what you sell.</span></li>
+      <li><span class="q">&ldquo;Deals aren't converting.&rdquo;</span><span class="a"><b>Maybe it's positioning.</b> If buyers can't tell why you, they benchmark on price.</span></li>
+      <li><span class="q">&ldquo;Sales says the leads are weak.&rdquo;</span><span class="a"><b>Maybe it's qualification.</b> Two definitions of a lead create one argument.</span></li>
+      <li><span class="q">&ldquo;CAC is climbing.&rdquo;</span><span class="a"><b>Maybe it's the ICP.</b> A thin list costs more to convert.</span></li>
+      <li><span class="q">&ldquo;Marketing is busy.&rdquo;</span><span class="a"><b>Maybe there is no system.</b> Activity without one produces more activity.</span></li>
+    </ul>
+  </div>
+</section>
 
-      <aside class="hero-meta-list" aria-label="At a glance">
-        <div class="hero-meta-row">
-          <div class="k">Discipline</div>
-          <div class="v">GTM diagnosis and revenue-system rebuild for B2B technology companies with an active pipeline-predictability problem.</div>
-        </div>
-        <div class="hero-meta-row">
-          <div class="k">Engagement</div>
-          <div class="v">Fixed-scope. Senior involvement throughout. Delivered against defined outcomes. Not retainers.</div>
-        </div>
-        <div class="hero-meta-row" style="border-bottom:0">
-          <div class="k">First step</div>
-          <div class="v">A 30-minute Diagnostic Call. One specific observation about your GTM before the conversation ends.</div>
-        </div>
-      </aside>
+<!-- ══ 03 THE MARKETING GROWTH SYSTEM ═══════════════════════ -->
+<section id="system">
+  <div class="wrap">
+    <div class="head rv">
+      <div>
+        <p class="eyebrow">The framework</p>
+        <h2>The Marketing Growth System</h2>
+      </div>
+      <p class="lede">Six places growth breaks.</p>
     </div>
 
-    <div class="stats reveal">
-      <div class="stat"><div class="v">15<sup>+</sup></div><div class="l">Years in-house B2B GTM</div></div>
-      <div class="stat"><div class="v">$2M<sup>+</sup></div><div class="l">Revenue attributed to pipeline</div></div>
-      <div class="stat"><div class="v">8</div><div class="l">Companies, marketing built from zero</div></div>
-      <div class="stat"><div class="v">4</div><div class="l">Operating markets</div></div>
-    </div>
+    <ol class="mgs rv">
+      <li style="--i:0"><span class="dot" aria-hidden="true"></span><span class="num">01</span><h3>Market</h3><p>Who should you win?</p></li>
+      <li style="--i:1"><span class="dot" aria-hidden="true"></span><span class="num">02</span><h3>Message</h3><p>Why should they care?</p></li>
+      <li style="--i:2"><span class="dot" aria-hidden="true"></span><span class="num">03</span><h3>Motion</h3><p>How do you reach them?</p></li>
+      <li style="--i:3"><span class="dot" aria-hidden="true"></span><span class="num">04</span><h3>Conversion</h3><p>Why aren't they moving?</p></li>
+      <li style="--i:4"><span class="dot" aria-hidden="true"></span><span class="num">05</span><h3>Alignment</h3><p>Can sales turn interest into revenue?</p></li>
+      <li style="--i:5"><span class="dot" aria-hidden="true"></span><span class="num">06</span><h3>Measurement</h3><p>Can you see what's working?</p></li>
+    </ol>
 
-    <div class="sectors reveal">
-      <span class="label">Proven across</span><span class="sep"></span>
-      <span>B2B SaaS</span><span class="sep"></span>
-      <span>FinTech</span><span class="sep"></span>
-      <span>NaaS</span><span class="sep"></span>
-      <span>IT Services</span>
-      <span class="spacer"></span>
-      <span>India</span><span class="sep"></span>
-      <span>UK</span><span class="sep"></span>
-      <span>North America</span><span class="sep"></span>
-      <span>Europe</span>
+    <div class="constraint-row">
+      <p class="constraint rv"><span class="c1">Find the constraint.</span><span class="c2">Fix the constraint.</span></p>
+      <p class="constraint-note rv">Each case below is tagged with the dimension it fixed.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══ BRIDGE ═══ -->
-<section class="section section--diagnosis" id="diagnosis">
+<!-- ══ 04 SELECTED WORK ═════════════════════════════════════ -->
+<section class="s-alt" id="work">
   <div class="wrap">
-    <div class="bridge">
-      <div class="bridge-col">
-        <p class="eyebrow reveal"><span class="dot"></span>The diagnosis</p>
-        <h2 class="display-2 bridge-head reveal">You know the symptoms.<br><em>Most misread the cause.</em></h2>
-        <p class="bridge-text reveal">The campaigns are running. The CRM is active. The team is working hard. And still, CAC keeps climbing, sales says the leads are weak, and the board is losing confidence in the forecast.</p>
-        <p class="bridge-text reveal">So most companies do the obvious thing: more channels, more spend, more headcount. The pipeline still does not move, because none of it touches the cause.</p>
-        <p class="bridge-emphasis reveal">The activity is not failing. It is leaking through a system that was never built to turn it into pipeline.</p>
-        <p class="bridge-text reveal">That system is your revenue architecture. Six moving parts decide whether activity becomes pipeline:</p>
-      </div>
-
-      <div class="flow" role="img" aria-label="Activity flows through six parts of the revenue architecture to become pipeline: who you target, why buyers choose you, how demand is generated, what counts as qualified, whether you can see results, how leads reach sales. When any one breaks, the flow leaks.">
-        <div class="flow-rail">
-          <span class="flow-end flow-end--in reveal">Activity</span>
-          <div class="flow-track">
-            <span class="flow-line reveal reveal--draw" aria-hidden="true"></span>
-            <span class="flow-pulse" aria-hidden="true"></span>
-            <ol class="flow-nodes">
-              <li class="flow-node"><span class="flow-dot"></span><span class="n">01</span><span class="lbl">who you target</span></li>
-              <li class="flow-node"><span class="flow-dot"></span><span class="n">02</span><span class="lbl">why buyers choose you</span></li>
-              <li class="flow-node"><span class="flow-dot"></span><span class="n">03</span><span class="lbl">how demand is generated</span></li>
-              <li class="flow-break reveal" aria-hidden="true" style="--reveal-delay:480ms"><span class="flow-break-lbl">the leak</span><span class="flow-break-mark"></span></li>
-              <li class="flow-node"><span class="flow-dot"></span><span class="n">04</span><span class="lbl">what counts as qualified</span></li>
-              <li class="flow-node"><span class="flow-dot"></span><span class="n">05</span><span class="lbl">whether you can see results</span></li>
-              <li class="flow-node"><span class="flow-dot"></span><span class="n">06</span><span class="lbl">how leads reach sales</span></li>
-            </ol>
-          </div>
-          <span class="flow-end flow-end--out reveal">Pipeline</span>
-        </div>
-      </div>
-
-      <div class="bridge-col">
-        <p class="bridge-text reveal">When any one is built wrong, more activity only produces more activity.</p>
-        <p class="bridge-final reveal">The work is to find the one part that is the actual constraint and rebuild it. Fix the right one, and the spend you already make starts producing pipeline you can forecast and defend.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ WHO IT IS FOR ═══ -->
-<section class="section section--who" id="who">
-  <div class="wrap">
-    <p class="eyebrow reveal"><span class="dot"></span>The fit</p>
-    <h2 class="display-2 who-head reveal">Built for one situation. <em>Not one company size.</em></h2>
-    <div class="who-grid">
-      <div class="who-col who-col--for">
-        <p class="who-label reveal">Who is ScaleBuz for</p>
-        <ul class="who-list who-list--for">
-          <li class="who-item reveal" style="--reveal-delay:70ms"><span class="who-tick" aria-hidden="true">✓</span><div><p class="who-lead">Activity, not pipeline.</p><p class="who-clar">The dashboards are green, the team is busy, and the one number that matters has not moved.</p></div></li>
-          <li class="who-item reveal" style="--reveal-delay:140ms"><span class="who-tick" aria-hidden="true">✓</span><div><p class="who-lead">An agency that did not land.</p><p class="who-clar">You paid for the decks and the dashboards, and the pipeline looks the same as the day you signed.</p></div></li>
-          <li class="who-item reveal" style="--reveal-delay:210ms"><span class="who-tick" aria-hidden="true">✓</span><div><p class="who-lead">Sales and marketing at odds.</p><p class="who-clar">Sales calls the leads weak, marketing says sales never works them, and you are the one refereeing.</p></div></li>
-          <li class="who-item reveal" style="--reveal-delay:280ms"><span class="who-tick" aria-hidden="true">✓</span><div><p class="who-lead">No engine yet.</p><p class="who-clar">The growth came from founder selling and referrals, and you can feel it will not scale much further.</p></div></li>
-        </ul>
-      </div>
-      <div class="who-col who-col--not">
-        <p class="who-label who-label--mute">Who is ScaleBuz not for?</p>
-        <ul class="who-list who-list--not">
-          <li class="who-item"><span class="who-dash" aria-hidden="true"></span><div><p class="who-lead">Cheapest leads.</p><p class="who-clar">You are optimising for cost per lead, not pipeline.</p></div></li>
-          <li class="who-item"><span class="who-dash" aria-hidden="true"></span><div><p class="who-lead">A new tool stack.</p><p class="who-clar">You want rip-and-replace, not better use of the one you already run.</p></div></li>
-          <li class="who-item"><span class="who-dash" aria-hidden="true"></span><div><p class="who-lead">A guaranteed number.</p><p class="who-clar">You want a promise before a diagnosis.</p></div></li>
-          <li class="who-item"><span class="who-dash" aria-hidden="true"></span><div><p class="who-lead">A quick fix.</p><p class="who-clar">You want a tactic to try, not the one constraint found and rebuilt.</p></div></li>
-        </ul>
-      </div>
-    </div>
-
-    <p class="who-operator reveal">Unlike a large agency, you are never handed a junior team. Two senior operators run the account, and every call is built on fifteen years on the marketing front line: what actually works when you are carrying a pipeline number to a board, not what reads well in a deck.</p>
-
-    <div class="who-action reveal">
-      <a class="btn btn-primary who-action-cta" data-magnetic href="https://calendly.com/vermarac1" target="_blank" rel="noopener">Book the diagnostic call <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="#engagements">See consulting engagements <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="#services">See targeted services <span class="arr">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ FAILURE POINTS ═══ -->
-<section class="section section--tight" id="framework">
-  <div class="wrap">
-    <p class="eyebrow reveal"><span class="dot"></span>The framework</p>
-    <div>
-        <div class="col-2" style="align-items:end;margin-bottom:64px">
-          <h2 class="display-2 reveal">The six failure points.<br><em>Most companies fix the wrong one.</em></h2>
-          <p class="body reveal" style="max-width:42ch">The same diagnostic behind every engagement. Pipeline rarely breaks in more than one place at a time, which is exactly why a generic playbook misses the constraint.</p>
-        </div>
-
-        <div class="frame-grid reveal">
-          <article class="frame-cell">
-            <div class="idx">No. 01 · ICP failure</div>
-            <p>The target market is too broad. Campaigns generate activity, not qualified demand, and sales spends time on accounts unlikely to convert. CAC reflects it.</p>
-          </article>
-          <article class="frame-cell">
-            <div class="idx">No. 02 · Positioning failure</div>
-            <p>Buyers understand what you do. They do not understand why to choose you over the alternative. Deals stall at evaluation and sales cycles stretch. It reads as a product gap; it is a positioning one.</p>
-          </article>
-          <article class="frame-cell">
-            <div class="idx">No. 03 · Channel and motion failure</div>
-            <p>Demand is generated in the wrong places, or through a motion that does not fit how your buyers actually buy. Effort flows into channels that produce volume, not pipeline.</p>
-          </article>
-          <article class="frame-cell">
-            <div class="idx">No. 04 · Qualification failure</div>
-            <p>Marketing and sales define a qualified lead differently. Volume exists; revenue efficiency does not. The funnel looks healthy on one dashboard and thin on the other, and neither side trusts the numbers.</p>
-          </article>
-          <article class="frame-cell">
-            <div class="idx">No. 05 · Attribution failure</div>
-            <p>You cannot see what is actually producing pipeline. Spend continues on channels that look busy, while the ones quietly working go unfunded, because the signal is missing.</p>
-          </article>
-          <article class="frame-cell">
-            <div class="idx">No. 06 · Handoff failure</div>
-            <p>Interest is created, then lost in the gap between marketing and sales. With no shared process across the journey, momentum disappears between stages and pipeline never forms.</p>
-          </article>
-        </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══ ENGAGEMENTS ═══ -->
-<section class="section section--engagements" id="engagements">
-  <div class="wrap">
-    <p class="eyebrow reveal"><span class="dot"></span>The engagements</p>
-    <div class="col-2" style="align-items:end;margin-bottom:48px">
-      <h2 class="display-2 reveal">Fixed-scope <span class="accent-word">consulting</span> engagements.<br><em>Defined outcomes.</em></h2>
-      <p class="body reveal" style="max-width:42ch">No retainers. No discovery loops. Each engagement has a stated input, a stated output, and a senior operator accountable for both. Choose the engagement that matches the constraint you are trying to remove.</p>
-    </div>
-
-    <article class="tier reveal">
-      <div class="t-num">01</div>
+    <div class="head rv">
       <div>
-        <div class="deck">Diagnose before you build</div>
-        <h3>Revenue Clarity<br><em>Audit</em></h3>
-        <div class="meta">
-          <div class="meta-row"><div class="k">Timeline</div><div>5 to 7 business days</div></div>
-          <div class="meta-row"><div class="k">For</div><div>Companies generating activity but not pipeline.</div></div>
-          <div class="meta-row"><div class="k">Credit</div><div>Audit fee credited toward the Sprint if you proceed.</div></div>
-        </div>
+        <p class="eyebrow">Proof</p>
+        <h2>Selected work</h2>
       </div>
-      <div>
-        <p class="desc">A structured diagnostic of the GTM system covering positioning, ICP definition, funnel conversion, qualification logic, attribution visibility, and marketing-to-sales alignment.</p>
-        <p class="desc">The outcome is a prioritised action plan based on where revenue efficiency is actually breaking. Produced before any resources are committed to execution, hiring, or a broader rebuild.</p>
-        <a class="btn-link" href="https://calendly.com/vermarac1" target="_blank" rel="noopener">Diagnose the GTM constraint →</a>
-      </div>
-    </article>
-
-    <article class="tier reveal">
-      <div class="t-num">02</div>
-      <div>
-        <div class="deck">Build the revenue system</div>
-        <h3>Pipeline Architecture <em>Sprint</em></h3>
-        <div class="meta">
-          <div class="meta-row"><div class="k">Timeline</div><div>4 to 6 weeks</div></div>
-          <div class="meta-row"><div class="k">For</div><div>Companies with ICP clarity that need a working pipeline machine.</div></div>
-          <div class="meta-row"><div class="k">Mode</div><div>Embedded. We work inside your existing stack.</div></div>
-        </div>
-      </div>
-      <div>
-        <p class="desc">A focused redesign and deployment of the core revenue-generation infrastructure, built inside your existing stack. This is not a strategy deck.</p>
-        <p class="desc">By the end of the Sprint the core infrastructure is operational: outbound systems, qualification frameworks, pipeline definitions, attribution visibility, campaign architecture, and CRM workflows.</p>
-        <a class="btn-link" href="https://calendly.com/vermarac1" target="_blank" rel="noopener">Fix the pipeline architecture →</a>
-      </div>
-    </article>
-
-    <article class="tier reveal">
-      <div class="t-num">03</div>
-      <div>
-        <div class="deck">Sustain the system</div>
-        <h3>Strategic Growth <em>Partnership</em></h3>
-        <div class="meta">
-          <div class="meta-row"><div class="k">Timeline</div><div>Quarterly cycles</div></div>
-          <div class="meta-row"><div class="k">For</div><div>Companies requiring sustained strategic oversight.</div></div>
-          <div class="meta-row"><div class="k">Cadence</div><div>Operator in the room when revenue decisions are made.</div></div>
-        </div>
-      </div>
-      <div>
-        <p class="desc">Most companies that have rebuilt their GTM system still need someone in the room when pipeline stalls, when a forecast needs defending, or when a key hire changes the revenue structure.</p>
-        <p class="desc">The Partnership keeps that person accessible across quarters: pipeline reviews, revenue planning, ABM execution, conversion optimisation, and forecast visibility.</p>
-        <a class="btn-link" href="https://calendly.com/vermarac1" target="_blank" rel="noopener">Discuss strategic GTM leadership →</a>
-      </div>
-    </article>
-
-    <div class="diag-card diag-card--dark reveal">
-      <div>
-        <h4>The Diagnostic Call: what to expect.</h4>
-        <p>30 minutes. The first 15 cover your situation: pipeline, team structure, biggest growth bottlenecks. Before the call ends, one specific observation about your GTM based only on what you have described. No deck. No pressure. If there is no fit, we will say so.</p>
-      </div>
-      <div class="right cta-stack">
-        <a class="btn btn-primary" data-magnetic href="https://calendly.com/vermarac1" target="_blank" rel="noopener" style="background:var(--accent);border-color:var(--accent);color:var(--accent-ink)">Book the diagnostic call <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="#services">See targeted services <span class="arr">→</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ CASE STUDIES ═══ -->
-<section class="section section--cases" id="cases">
-  <div class="wrap">
-    <p class="eyebrow reveal"><span class="dot"></span>The proof</p>
-    <div class="col-2" style="align-items:end;margin-bottom:48px">
-      <h2 class="display-2 reveal">Three engagements.<br><em>One consistent outcome.</em></h2>
-      <p class="body reveal" style="max-width:42ch">Each case describes the structural constraint identified, the specific work performed inside the company, and the measurable outcome. Names withheld under engagement terms.</p>
+      <p class="lede">Open a case for the constraint, the work and the lesson.</p>
     </div>
 
-    <article class="case reveal">
-      <header class="case-head">
-        <div>
-          <div class="case-num">CASE FILE No. 01 / 03</div>
-          <h3>B2C-to-B2B transformation, executed without pausing revenue.</h3>
-        </div>
-        <div class="case-tag">Network-as-a-Service (India)</div>
-      </header>
-      <div class="case-body">
-        <div class="case-col">
-          <h5>Situation</h5>
-          <p>A network infrastructure company transitioning from B2C to enterprise B2B with no structured positioning for business buyers, no predictable pipeline, and no ICP definition. Revenue depended entirely on founder relationships. Marketing and sales were operating independently with no shared framework.</p>
-        </div>
-        <div class="case-col">
-          <h5>The work</h5>
-          <ul>
-            <li>Rebuilt positioning for enterprise B2B buyers</li>
-            <li>Redefined ICP using early customer and conversion data</li>
-            <li>Designed full multi-channel GTM motion: outbound, content, paid, and events running in parallel</li>
-            <li>Rebuilt marketing-to-sales qualification and handoff from scratch</li>
-          </ul>
-        </div>
-        <div class="case-col">
-          <h5>Results</h5>
-          <div class="case-results">
-            <div class="r"><div class="v">45<sup>%</sup></div><div class="l">Increase in lead generation</div></div>
-            <div class="r"><div class="v">20<sup>%</sup></div><div class="l">Improvement in sales conversion</div></div>
-            <div class="r"><div class="v">40<sup>%</sup></div><div class="l">Improvement in customer retention</div></div>
-            <div class="r"><div class="v">7,000<sup>+</sup></div><div class="l">Active leads under management</div></div>
-          </div>
-        </div>
-      </div>
-      <div class="case-foot">Full GTM rebuild while the business continued operating. Without pausing revenue generation.</div>
-    </article>
+    <div class="cases" data-stagger>
 
-    <article class="case reveal">
-      <header class="case-head">
-        <div>
-          <div class="case-num">CASE FILE No. 02 / 03</div>
-          <h3>Zero-to-pipeline in nine months for an enterprise IT and SaaS company.</h3>
-        </div>
-        <div class="case-tag">Enterprise IT &amp; SaaS (US)</div>
-      </header>
-      <div class="case-body">
-        <div class="case-col">
-          <h5>Situation</h5>
-          <p>A multi-product enterprise IT and SaaS company had no structured pipeline-generation system. Qualification logic between marketing and sales was weak. Revenue was founder-led, and separate product lines were operating without a unified GTM structure.</p>
-        </div>
-        <div class="case-col">
-          <h5>The work</h5>
-          <ul>
-            <li>Defined ICPs and personas across product lines</li>
-            <li>Built multi-channel acquisition: SEO, LinkedIn, email, content, events, outbound</li>
-            <li>Introduced CRM attribution, reporting visibility, and qualification frameworks</li>
-            <li>Constructed outbound and inbound demand infrastructure from zero</li>
-          </ul>
-        </div>
-        <div class="case-col">
-          <h5>Results</h5>
-          <div class="case-results">
-            <div class="r"><div class="v">$2M<sup>+</sup></div><div class="l">Revenue contribution</div></div>
-            <div class="r"><div class="v">1,000<sup>+</sup></div><div class="l">Qualified leads per quarter</div></div>
-            <div class="r"><div class="v">50<sup>%</sup></div><div class="l">Improvement in lead quality</div></div>
-            <div class="r"><div class="v">30<sup>%</sup></div><div class="l">Improvement in conversion</div></div>
-          </div>
-        </div>
-      </div>
-      <div class="case-foot">What a correctly architected GTM system produces once structural constraints are removed.</div>
-    </article>
-
-    <article class="case reveal">
-      <header class="case-head">
-        <div>
-          <div class="case-num">CASE FILE No. 03 / 03</div>
-          <h3>Conversion improvement by fixing the constraint. Not rebuilding everything.</h3>
-        </div>
-        <div class="case-tag">FinTech SaaS (UK)</div>
-      </header>
-      <div class="case-body">
-        <div class="case-col">
-          <h5>Situation</h5>
-          <p>A UK FinTech SaaS company faced rising CAC across acquisition channels, broad ICP targeting creating inefficient demand, weak alignment between buyer-stage content and conversion intent, and event programmes generating low pipeline impact.</p>
-        </div>
-        <div class="case-col">
-          <h5>The work</h5>
-          <ul>
-            <li>Refined ICP targeting across paid, outbound, and organic</li>
-            <li>Rebuilt qualification logic with full sales alignment</li>
-            <li>Redesigned content strategy around buyer-stage intent</li>
-            <li>Reworked event and webinar programmes around pipeline conversion</li>
-          </ul>
-        </div>
-        <div class="case-col">
-          <h5>Results</h5>
-          <div class="case-results">
-            <div class="r"><div class="v">35<sup>%</sup></div><div class="l">Improvement in lead-to-conversion rates</div></div>
-            <div class="r"><div class="v">30<sup>%</sup></div><div class="l">Growth in digital engagement</div></div>
-            <div class="r"><div class="v">25<sup>%</sup></div><div class="l">Increase in event-qualified leads</div></div>
-            <div class="r"><div class="v">20<sup>%</sup></div><div class="l">Improvement in operational efficiency</div></div>
-          </div>
-        </div>
-      </div>
-      <div class="case-foot">Significant conversion improvement by diagnosing and fixing the specific constraint. Not a full rebuild.</div>
-    </article>
-
-    <div class="diag-card reveal">
-      <div>
-        <h4>The same operator. Eight standalone capabilities.</h4>
-        <p>If you have the strategy and need execution, every capability is available as a standalone engagement. Built around qualified pipeline, not activity volume.</p>
-      </div>
-      <div class="right cta-stack">
-        <a class="btn btn-primary" data-magnetic href="#services">See targeted services <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="#engagements">See consulting engagements <span class="arr">→</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ SERVICES ═══ -->
-<section class="section section--services" id="services">
-  <div class="wrap">
-    <p class="eyebrow reveal"><span class="dot"></span>The services</p>
-    <div class="col-2" style="align-items:end;margin-bottom:48px">
-      <h2 class="display-2 reveal">Targeted <span class="accent-word">services.</span><br><em>Standalone or embedded.</em></h2>
-      <p class="body reveal" style="max-width:42ch">If you have the strategy and need execution, these are available as standalone engagements. All services are also components of a Pipeline Architecture Sprint or Strategic Growth Partnership.</p>
-    </div>
-
-    <div class="svc-grid reveal">
-      <article class="svc">
-        <div class="idx">No. 01 · Strategy</div>
-        <h4>Strategy &amp; GTM</h4>
-        <p>Connects ICP definition, positioning logic, and GTM motion to qualified pipeline. The strategic foundation that sits beneath all execution.</p>
-        <ul>
-          <li>ICP definition &amp; scoring</li>
-          <li>Positioning audit &amp; framework</li>
-          <li>GTM strategy design</li>
-          <li>Sales and marketing alignment plan</li>
-        </ul>
-      </article>
-      <article class="svc">
-        <div class="idx">No. 02 · Brand</div>
-        <h4>Brand &amp; Messaging</h4>
-        <p>Positioning and messaging infrastructure beneath every campaign, sales conversation, and pitch. Built before execution begins, not after.</p>
-        <ul>
-          <li>Messaging hierarchy</li>
-          <li>Product positioning framework</li>
-          <li>Competitive differentiation</li>
-          <li>Product launch strategy</li>
-        </ul>
-      </article>
-      <article class="svc">
-        <div class="idx">No. 03 · Demand</div>
-        <h4>Demand Generation</h4>
-        <p>Built around qualified pipeline, not activity volume. Each channel is selected and measured against a defined revenue contribution.</p>
-        <ul>
-          <li>Outbound sequence architecture</li>
-          <li>Paid acquisition strategy</li>
-          <li>SEO for commercial intent</li>
-          <li>Attribution &amp; pipeline reporting</li>
-        </ul>
-      </article>
-      <article class="svc">
-        <div class="idx">No. 04 · Authority</div>
-        <h4>Social &amp; Content</h4>
-        <p>Converts professional visibility into qualified inbound interest. Content mapped to commercial intent and buyer-stage relevance.</p>
-        <ul>
-          <li>LinkedIn content strategy</li>
-          <li>Thought-leadership programme</li>
-          <li>Editorial calendar</li>
-          <li>Content-to-pipeline attribution</li>
-        </ul>
-      </article>
-      <article class="svc">
-        <div class="idx">No. 05 · Lifecycle</div>
-        <h4>Lifecycle &amp; Email</h4>
-        <p>Keeps qualified prospects engaged across the buying journey. Built for pipeline conversion, not open rates or email volume.</p>
-        <ul>
-          <li>Nurture sequence architecture</li>
-          <li>Audience segmentation</li>
-          <li>Retention campaigns</li>
-          <li>Lifecycle reporting</li>
-        </ul>
-      </article>
-      <article class="svc">
-        <div class="idx">No. 06 · AI</div>
-        <h4>AI Automation</h4>
-        <p>AI applied to specific, measurable GTM problems. ICP precision, outbound enrichment, and account-level buying signal detection.</p>
-        <ul>
-          <li>ICP scoring &amp; lookalike matching</li>
-          <li>Intent-signal monitoring</li>
-          <li>CRM enrichment workflows</li>
-          <li>Outbound sequence variant testing</li>
-        </ul>
-      </article>
-      <article class="svc">
-        <div class="idx">No. 07 · Web</div>
-        <h4>Website &amp; Digital</h4>
-        <p>Conversion architecture that communicates value and moves visitors toward a qualified next step. Pipeline impact is the measure.</p>
-        <ul>
-          <li>Conversion audit</li>
-          <li>Messaging &amp; UX recommendations</li>
-          <li>Landing-page design &amp; copy</li>
-          <li>CRO testing framework</li>
-        </ul>
-      </article>
-      <article class="svc">
-        <div class="idx">No. 08 · Events</div>
-        <h4>Events &amp; Webinars</h4>
-        <p>Events generate pipeline when targeting and post-event conversion are built around a commercial outcome, not attendance metrics.</p>
-        <ul>
-          <li>Event strategy &amp; targeting</li>
-          <li>Speaker programme design</li>
-          <li>Webinar production framework</li>
-          <li>Post-event conversion sequence</li>
-        </ul>
-      </article>
-    </div>
-
-    <p class="kicker" style="text-align:center;margin-top:36px;letter-spacing:.22em">All services available as components of a Pipeline Architecture Sprint or Strategic Growth Partnership</p>
-
-    <div class="diag-card reveal">
-      <div>
-        <h4>Need the full architecture, not just a targeted service?</h4>
-        <p>Each service is also a component of a Pipeline Architecture Sprint or Strategic Growth Partnership. Three structured engagements, each built around a defined outcome.</p>
-      </div>
-      <div class="right">
-        <a class="btn btn-primary" data-magnetic href="#engagements">See consulting engagements <span class="arr">→</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ TEAM ═══ -->
-<section class="section section--team" id="team">
-  <div class="wrap">
-    <p class="eyebrow reveal"><span class="dot"></span>The team</p>
-    <div class="col-2" style="align-items:end;margin-bottom:32px">
-      <h2 class="display-2 reveal">Two operators.<br><em>One methodology.</em></h2>
-      <p class="body reveal" style="max-width:42ch">ScaleBuz does not staff engagements through junior consultants. The two operators below are personally accountable for diagnosis, design, and outcome on every account.</p>
-    </div>
-
-    <div class="team-grid">
-      <article class="member reveal">
-        <div class="member-head">
+      <details class="case">
+        <summary>
+          <span class="mech">Market</span>
+          <span class="case-main">
+            <span class="co">Shyam Spectra &middot; NaaS and enterprise connectivity</span>
+            <span class="ct">From consumer broadband to enterprise B2B</span>
+            <span class="cstats"><span><b>45%</b> lead generation</span><span><b>20%</b> sales conversion</span><span><b>40%</b> retention</span><span><b>7,000+</b> leads managed</span></span>
+          </span>
+          <span class="tog" aria-hidden="true"></span>
+        </summary>
+        <div class="case-body">
           <div>
-            <h4>Rachit Verma</h4>
-            <div class="role">Co-Founder · Revenue Architect</div>
+            <h4>The problem</h4>
+            <p>A consumer broadband business had to sell to enterprise buyers, with no enterprise positioning, ICP, demand engine or shared qualification with sales.</p>
+            <h4>The constraint</h4>
+            <p>Market. Nobody could say which enterprise accounts to win, so channel, message and sales coverage ran on assumption.</p>
           </div>
-          <a class="btn-link" href="https://www.linkedin.com/in/rachitverma1/" target="_blank" rel="noopener" aria-label="Rachit on LinkedIn">LinkedIn ↗</a>
-        </div>
-        <div class="member-credentials">MBA, Indian School of Business &nbsp;·&nbsp; B2B Marketing Leader &nbsp;·&nbsp; GTM &amp; Growth Specialist</div>
-        <p class="member-bio">15 years inside B2B technology companies building the systems that connect marketing activity to qualified pipeline. Has led GTM redesigns, positioning rebuilds, and demand-generation infrastructure across SaaS, FinTech, NaaS, and IT services, in environments where pipeline performance was reported to boards and forecasts had to be defended. His operating background is the source of the ScaleBuz methodology: diagnose the constraint first, build the system required to fix it, then create the visibility that lets leadership trust the forecast.</p>
-        <div class="member-focus">
-          <span class="l">Focus areas</span>
-          Revenue architecture · GTM strategy · Pipeline systems · Demand generation
-        </div>
-      </article>
-
-      <article class="member reveal">
-        <div class="member-head">
           <div>
-            <h4>Preyanka Jain</h4>
-            <div class="role">Co-Founder · Strategic Transformation</div>
+            <h4>What I did</h4>
+            <ul>
+              <li>Defined the ICP from conversion data and matched every CRM lead to ICP and persona</li>
+              <li>Rebuilt enterprise positioning and launched three flagship products</li>
+              <li>Built a multi-channel GTM motion and automated sales handover in HubSpot</li>
+              <li>Sold Wi-Fi Pro myself, in the field, to paying guest operators in Bangalore</li>
+            </ul>
           </div>
-          <a class="btn-link" href="https://www.linkedin.com/in/preyanka-jain-85803819/" target="_blank" rel="noopener" aria-label="Preyanka on LinkedIn">LinkedIn ↗</a>
+          <div class="lesson">
+            <h4>The lesson</h4>
+            <p>Once you have personally sold the thing, sales stops seeing you as the person who sends leads.</p>
+          </div>
         </div>
-        <div class="member-credentials">MBA, Indian School of Business &nbsp;·&nbsp; Strategic Transformation Leader &nbsp;·&nbsp; Gartner-aligned frameworks</div>
-        <p class="member-bio">Strategic-transformation leader with deep experience building and scaling outcome-driven growth functions across marketing, sales enablement, digital transformation, and operational excellence. Has led end-to-end digital transformations: from strategy and stakeholder alignment through process redesign, technology evaluation, implementation, and business-impact realisation. Her focus inside every ScaleBuz engagement is turning GTM strategy into operational systems that teams actually adopt and leadership can measure.</p>
-        <div class="member-focus">
-          <span class="l">Focus areas</span>
-          Digital transformation · BDR/SDR ecosystems · CRM &amp; automation
+      </details>
+
+      <details class="case">
+        <summary>
+          <span class="mech">Message</span>
+          <span class="case-main">
+            <span class="co">BlueKaktus &middot; AI supply chain and enterprise software</span>
+            <span class="ct">Repositioning an ERP company as an AI supply chain platform</span>
+            <span class="cstats"><span><b>3</b> enterprise verticals</span><span><b>15+</b> sales and launch assets</span><span><b>6 months</b> zero to running process</span></span>
+          </span>
+          <span class="tog" aria-hidden="true"></span>
+        </summary>
+        <div class="case-body">
+          <div>
+            <h4>The problem</h4>
+            <p>The company was positioned as ERP but needed to compete as an AI supply chain platform, and sales had no case studies, battle cards or enablement.</p>
+            <h4>The constraint</h4>
+            <p>Message. The category was wrong, and the positioning had to work for brands and manufacturers at once.</p>
+          </div>
+          <div>
+            <h4>What I did</h4>
+            <ul>
+              <li>Built the positioning and messaging architecture for both sides of the market</li>
+              <li>Wrote the website and aligned founders, product and sales to a CEO deadline</li>
+              <li>Went live in time for the CEO's Netherlands meeting</li>
+              <li>Built enablement from nothing: case studies, battle cards, decks and a fortnightly sales cadence</li>
+            </ul>
+          </div>
+          <div class="lesson">
+            <h4>The lesson</h4>
+            <p>A senior marketer should be able to say they decided what the company says to the market, not only that leads went up.</p>
+          </div>
         </div>
-      </article>
+      </details>
+
+      <details class="case">
+        <summary>
+          <span class="mech">Motion</span>
+          <span class="case-main">
+            <span class="co">NayaOne &middot; FinTech SaaS, United Kingdom</span>
+            <span class="ct">Refilling a dry enterprise funnel with &pound;3,000</span>
+            <span class="cstats"><span><b>&pound;3,000</b> total spend</span><span><b>50</b> intent-qualified prospects</span><span><b>35%</b> lead to conversion</span><span><b>2 months</b> to funnel movement</span></span>
+          </span>
+          <span class="tog" aria-hidden="true"></span>
+        </summary>
+        <div class="case-body">
+          <div>
+            <h4>The problem</h4>
+            <p>The enterprise funnel had gone quiet. The market was small and risk-sensitive, so more paid reach would have bought impressions, not buyers.</p>
+            <h4>The constraint</h4>
+            <p>Motion. Buyers signalling intent existed; the channel we paid for wasn't reaching them.</p>
+          </div>
+          <div>
+            <h4>What I did</h4>
+            <ul>
+              <li>Chose content syndication over more paid spend and negotiated directly with TechTarget</li>
+              <li>Got the &pound;3,000 programme signed off by the CEO and wrote the white paper myself</li>
+              <li>Structured the terms around demonstrated intent, not impressions</li>
+              <li>Routed returned names straight to inside sales, with context</li>
+            </ul>
+          </div>
+          <div class="lesson">
+            <h4>The lesson</h4>
+            <p>In a small enterprise market you need better access to buyers already signalling intent, not more reach.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="case">
+        <summary>
+          <span class="mech">Measurement</span>
+          <span class="case-main">
+            <span class="co">AgreeYa Solutions &middot; Enterprise IT and SaaS, US market</span>
+            <span class="ct">Marketing built around a $250K demand mandate</span>
+            <span class="cstats"><span><b>~$1M</b> revenue contribution</span><span><b>1,000+</b> qualified leads a quarter</span><span><b>50%</b> lead quality</span><span><b>30%</b> conversion</span><span><b>10,000+</b> visitors in quarter one</span></span>
+          </span>
+          <span class="tog" aria-hidden="true"></span>
+        </summary>
+        <div class="case-body">
+          <div>
+            <h4>The problem</h4>
+            <p>Growth ran on events and relationships. Two acquired products needed a digital demand engine, with no funnel, acquisition model or shared lead definition.</p>
+            <h4>The constraint</h4>
+            <p>Measurement. Without funnel maths nothing marketing did connected to revenue, so the budget was a matter of faith.</p>
+          </div>
+          <div>
+            <h4>What I did</h4>
+            <ul>
+              <li>Worked back from the revenue target to opportunities, SQLs, MQLs, channels and budget</li>
+              <li>Defined every funnel stage with sales, signed off by sales and the CEO</li>
+              <li>Tied marketing's target to revenue, not lead volume</li>
+              <li>Built multi-channel acquisition and the attribution layer from the start</li>
+            </ul>
+          </div>
+          <div class="lesson">
+            <h4>The lesson</h4>
+            <p>Sales accepts your definitions once you accept being measured on the outcome.</p>
+          </div>
+        </div>
+      </details>
+
+      <details class="more">
+        <summary>
+          <span class="more-l"><b>More work</b><small>2 cases &middot; Conversion &middot; Alignment</small></span>
+          <span class="tog" aria-hidden="true"></span>
+        </summary>
+        <div class="more-body">
+
+          <details class="case">
+            <summary>
+              <span class="mech">Conversion</span>
+              <span class="case-main">
+                <span class="co">Microsoft Ignite &middot; AgreeYa Solutions</span>
+                <span class="ct">When the buyer is already in the building</span>
+                <span class="cstats"><span><b>700+</b> leads against a 300 forecast</span><span><b>40+</b> target-account meetings</span><span><b>~$57</b> cost per lead</span><span><b>25%</b> brand awareness lift</span></span>
+              </span>
+              <span class="tog" aria-hidden="true"></span>
+            </summary>
+            <div class="case-body">
+              <div>
+                <h4>The problem</h4>
+                <p>AgreeYa had attended Microsoft Ignite before without sponsoring. This time the spend had to produce measurable pipeline, not branding.</p>
+                <h4>The constraint</h4>
+                <p>Conversion. With the whole audience in the ICP, qualifying afterwards wastes the event's one advantage.</p>
+              </div>
+              <div>
+                <h4>What I did</h4>
+                <ul>
+                  <li>Reached attendees before the show through the Microsoft Partner Network</li>
+                  <li>Booked sales meetings before the doors opened</li>
+                  <li>Built lead capture, CRM tracking and follow-up in advance</li>
+                </ul>
+              </div>
+              <div class="lesson">
+                <h4>The lesson</h4>
+                <p>An event pays off when audience concentration makes the event itself the qualification.</p>
+              </div>
+            </div>
+          </details>
+
+          <details class="case">
+            <summary>
+              <span class="mech">Alignment</span>
+              <span class="case-main">
+                <span class="co">Systems Lifecycle &middot; Technology services</span>
+                <span class="ct">The job where marketing and sales were one job</span>
+                <span class="cstats"><span><b>80%</b> lead volume increase</span><span><b>10% to 20%</b> conversion rate</span><span><b>1</b> partner channel built</span></span>
+              </span>
+              <span class="tog" aria-hidden="true"></span>
+            </summary>
+            <div class="case-body">
+              <div>
+                <h4>The problem</h4>
+                <p>No pipeline and no lead generation process, then a wave of low-cost competitors.</p>
+                <h4>The constraint</h4>
+                <p>Alignment, then distribution. Lead counts didn't connect to revenue, and a cheaper competitor wins any side-by-side price comparison.</p>
+              </div>
+              <div>
+                <h4>What I did</h4>
+                <ul>
+                  <li>Fixed the website and added Google Ads as the first scalable channel</li>
+                  <li>Ran the whole path myself, from campaign to demo to proposal</li>
+                  <li>Measured meetings, demos, proposals and customers instead of leads</li>
+                  <li>Built a partner channel through legal and compliance firms that already held buyer trust</li>
+                </ul>
+              </div>
+              <div class="lesson">
+                <h4>The lesson</h4>
+                <p>When competitive pressure rises, sometimes you change the route to the customer instead of competing harder.</p>
+              </div>
+            </div>
+          </details>
+
+        </div>
+      </details>
+
     </div>
   </div>
 </section>
 
-<!-- ═══ FAQ ═══ -->
-<section class="section section--faq" id="faq">
+<!-- ══ 05 POINT OF VIEW ═════════════════════════════════════ -->
+<section id="thinking">
   <div class="wrap">
-    <p class="eyebrow reveal"><span class="dot"></span>Questions</p>
-    <div class="faq-grid">
-      <div class="reveal">
-        <h2 class="display-3">Questions about how this works.</h2>
-        <p class="small" style="max-width:32ch;margin-top:18px">If your question is not here, the Diagnostic Call is the fastest way to get a direct answer.</p>
-        <a class="btn-link" href="https://calendly.com/vermarac1" target="_blank" rel="noopener" style="margin-top:24px;display:inline-flex">Book the call →</a>
+    <div class="head head--solo rv">
+      <div>
+        <p class="eyebrow">Point of view</p>
+        <h2>I don't start with channels.</h2>
       </div>
-      <div class="faq-list reveal">
-        <details class="faq" open>
-          <summary>What is Revenue Architecture? <span class="ic">+</span></summary>
-          <div class="a">Revenue Architecture is the underlying GTM system that determines whether marketing activity produces qualified pipeline. It covers ICP definition, positioning, qualification logic, channel selection, attribution, and the operational handoff between marketing and sales. We diagnose where that system is breaking and rebuild the parts that are constraining revenue.</div>
-        </details>
-        <details class="faq">
-          <summary>How is this different from a consultancy or agency? <span class="ic">+</span></summary>
-          <div class="a">Agencies execute campaigns. Consultancies produce strategy decks. ScaleBuz designs and deploys the revenue-generation infrastructure inside your existing stack, with senior operators accountable for the outcome. Engagements are fixed-scope and tied to defined outcomes. Not retainers or hours billed.</div>
-        </details>
-        <details class="faq">
-          <summary>Do you replace our existing marketing team? <span class="ic">+</span></summary>
-          <div class="a">No. We work with your team. The methodology is designed to be operated by an in-house function once the architecture is built. We make your team measurably more effective by removing the structural constraints limiting their output. We do not become a permanent dependency.</div>
-        </details>
-        <details class="faq">
-          <summary>Do you replace our tools? <span class="ic">+</span></summary>
-          <div class="a">Almost never. The system is built inside the tools you already use: CRM, marketing automation, analytics, sales engagement. The constraint is rarely the tool. It is the architecture and workflows around it.</div>
-        </details>
-        <details class="faq">
-          <summary>Can you guarantee results? <span class="ic">+</span></summary>
-          <div class="a">We guarantee the diagnostic, the design, and the build, delivered to scope. We do not guarantee outcomes that depend on factors outside our control: product-market fit, pricing, sales execution, market timing. The Diagnostic Call exists so we both know whether the structural fix is the right intervention before any commitment is made.</div>
-        </details>
-        <details class="faq">
-          <summary>Do I need a long-term contract? <span class="ic">+</span></summary>
-          <div class="a">No. Every engagement is fixed-scope. The Audit is 5 to 7 business days. The Sprint is 4 to 6 weeks. The Strategic Growth Partnership runs in quarterly cycles, renewed only if both parties see continued value.</div>
-        </details>
+    </div>
+    <ol class="pov" data-stagger>
+      <li><span class="num">01</span><div><h3>Start with the business problem.</h3><p>The objective, the buyer and the number that has to move come before any channel.</p></div></li>
+      <li><span class="num">02</span><div><h3>Position before promotion.</h3><p>If the market doesn't understand the proposition, more media creates more noise.</p></div></li>
+      <li><span class="num">03</span><div><h3>Build the funnel as a system.</h3><p>Acquisition, nurture, conversion and handover are connected. Optimising one rarely fixes the business.</p></div></li>
+      <li><span class="num">04</span><div><h3>One language for marketing and sales.</h3><p>ICP, MQL and SQL must mean the same thing to both teams, or the funnel maths isn't real.</p></div></li>
+      <li><span class="num">05</span><div><h3>Data informs judgement.</h3><p>Analytics shows where the system breaks. Judgement decides what to investigate.</p></div></li>
+      <li><span class="num">06</span><div><h3>AI should increase leverage.</h3><p>I use it for research and content velocity, not strategy. It makes it easy to produce more of what isn't working.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══ 06 HOW I WORK ════════════════════════════════════════ -->
+<section class="s-alt" id="method">
+  <div class="wrap">
+    <div class="head rv">
+      <div>
+        <p class="eyebrow">How I work</p>
+        <h2>You don't need to know what you need. That's my job.</h2>
+      </div>
+      <p class="lede">Sometimes it's positioning. Sometimes it's GTM, demand or pipeline. The diagnosis decides.</p>
+    </div>
+    <ol class="steps" data-stagger>
+      <li><span class="num">01</span><h3>Diagnose</h3><p>The business, buyer, funnel and target.</p></li>
+      <li><span class="num">02</span><h3>Identify</h3><p>The one constraint holding growth back.</p></li>
+      <li><span class="num">03</span><h3>Prioritise</h3><p>What happens first, and what waits.</p></li>
+      <li><span class="num">04</span><h3>Build</h3><p>The system, inside your existing stack.</p></li>
+      <li><span class="num">05</span><h3>Execute</h3><p>Into market, with your team.</p></li>
+      <li><span class="num">06</span><h3>Measure</h3><p>Activity tied to revenue outcomes.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══ 07 THE OPERATOR ══════════════════════════════════════ -->
+<section id="operator">
+  <div class="wrap">
+    <div class="op">
+      <div class="profile rv">
+        <div class="avatar">
+          <img src="assets/rachit-avatar.jpg" alt="Rachit Verma" width="240" height="240" loading="lazy">
+        </div>
+        <div class="who">
+          <p class="who-n">Rachit Verma</p>
+          <p class="who-r">Founder &amp; Principal Consultant</p>
+          <a class="link" href="https://www.linkedin.com/in/rachitverma1/" target="_blank" rel="noopener" data-cta="profile-linkedin">LinkedIn <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+      <div class="op-body rv">
+        <p class="eyebrow">About</p>
+        <h2>You are not hiring a strategy deck. You are hiring the <span class="accent">judgement</span>.</h2>
+        <p>ScaleBuz is me. Not a bench of junior consultants, not an account manager. The person who runs your diagnostic is the person who does the work.</p>
+        <p>I have spent 15+ years in businesses where marketing had to solve a real commercial problem: build a function, reposition a company, create enterprise demand, enable sales. Four of those functions I built from nothing.</p>
+        <p>I have also personally sold, carrying deals end to end from the first click to the proposal. That is why the funnel maths and the sales conversation are the same conversation to me.</p>
+        <p class="creds">PGP PRO, Indian School of Business &nbsp;&middot;&nbsp; MBA, Anglia Ruskin University</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ FINAL CTA ═══ -->
-<section class="section section--cta" id="cta">
+<!-- ══ 08 EXPERIENCE ════════════════════════════════════════ -->
+<section class="s-alt" id="experience">
   <div class="wrap">
-    <p class="eyebrow reveal"><span class="dot"></span>The next step</p>
-    <div class="cta-grid">
-      <div class="reveal">
-        <h2 class="display-2">The pipeline problem <em>rarely fixes itself.</em></h2>
-        <p class="cta-lede" style="margin-top:32px;max-width:42ch">The Diagnostic Call is 30 minutes. Before it ends, one specific observation about your GTM system. Based only on what you have described. No deck. No pitch. No obligation.</p>
-        <p style="margin-top:24px;font-family:var(--sans);font-size:15px;line-height:1.6;max-width:48ch;color:#bdb6a3">Come with a rough sense of your current GTM motion and the problem you are trying to solve. That is enough. Rachit runs every call personally. If there is no fit, we will say so before it ends.</p>
-        <div class="hero-cta" style="margin-top:40px">
-          <a class="btn btn-primary" data-magnetic href="#engagements">See consulting engagements <span class="arr">→</span></a>
-          <a class="btn btn-ghost" href="#services">See targeted services <span class="arr">→</span></a>
-        </div>
+    <div class="head rv">
+      <div>
+        <p class="eyebrow">Experience</p>
+        <h2>Where the work has been done.</h2>
       </div>
+      <p class="lede">SaaS, FinTech, connectivity, enterprise IT, logistics and financial services.</p>
+    </div>
+    <ul class="cos" data-stagger>
+      <li>BlueKaktus</li>
+      <li>NayaOne</li>
+      <li>Shyam Spectra</li>
+      <li>Complinity</li>
+      <li>AgreeYa Solutions</li>
+      <li>Systems Lifecycle</li>
+      <li>WMS Software</li>
+      <li>Safexpress</li>
+      <li>Barclays Shared Services</li>
+      <li>American Express</li>
+      <li>Genpact</li>
+    </ul>
+  </div>
+</section>
 
-      <aside class="cta-form-wrap reveal" aria-label="Request a diagnostic call">
-        <form class="cta-form" id="leadForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-          <p class="cta-form-head">Request your diagnostic call.</p>
-          <div class="field">
-            <label class="k" for="lf-name">Name</label>
-            <input class="inp" id="lf-name" name="name" type="text" autocomplete="name" required>
-            <span class="field-err">Required</span>
-          </div>
-          <div class="field">
-            <label class="k" for="lf-company">Company name</label>
-            <input class="inp" id="lf-company" name="company" type="text" autocomplete="organization" required>
-            <span class="field-err">Required</span>
-          </div>
-          <div class="field">
-            <label class="k" for="lf-title">Job title</label>
-            <input class="inp" id="lf-title" name="job_title" type="text" autocomplete="organization-title" required>
-            <span class="field-err">Required</span>
-          </div>
-          <div class="field">
-            <label class="k" for="lf-phone">Phone number</label>
-            <input class="inp" id="lf-phone" name="phone" type="tel" autocomplete="tel" required>
-            <span class="field-err">Enter a valid phone number</span>
-          </div>
-          <div class="field">
-            <label class="k" for="lf-email">Official email</label>
-            <input class="inp" id="lf-email" name="email" type="email" autocomplete="email" required>
-            <span class="field-err">Use your work email</span>
-          </div>
-          <input type="hidden" name="access_key" value="42038573-b698-4bcb-8cca-5e63d3dbfee6">
-          <input type="hidden" name="subject" value="New diagnostic request — scalebuz.co">
-          <input type="hidden" name="from_name" value="ScaleBuz website">
-          <input type="checkbox" name="botcheck" tabindex="-1" aria-hidden="true" style="display:none">
-          <button class="btn btn-primary cta-form-btn" type="submit" data-magnetic>Send request <span class="arr">→</span></button>
-          <p class="cta-form-note">Rachit replies personally, usually within one business day.</p>
-          <p class="cta-form-status" id="lf-status" role="status" aria-live="polite"></p>
-        </form>
-      </aside>
+<!-- ══ 09 THE DIAGNOSTIC ════════════════════════════════════ -->
+<section class="s-dark" id="diagnostic">
+  <div class="wrap">
+    <div class="offer">
+      <div class="rv">
+        <p class="eyebrow">Free &middot; 30 to 45 minutes</p>
+        <h2>Marketing Growth Diagnostic</h2>
+        <p class="big">Bring the problem. I'll bring the <em>diagnosis</em>.</p>
+      </div>
+      <div class="rv">
+        <ol class="dsteps">
+          <li><span class="num">01</span><div><strong>Your situation</strong><p>Where growth is stalling. You don't need to know why.</p></div></li>
+          <li><span class="num">02</span><div><strong>The likely constraint</strong><p>Which layer is holding growth back, and why the obvious fixes haven't worked.</p></div></li>
+          <li><span class="num">03</span><div><strong>One specific observation</strong><p>Something you can act on, whether or not we work together.</p></div></li>
+        </ol>
+        <p class="reversal"><b>No pitch deck. No junior consultant. No proposal unless there is a genuine problem worth solving.</b>If I'm not the right person to help, I'll say so.</p>
+        <a class="btn" href="diagnostic.html" data-cta="diagnostic-panel">Tell me what's not working <span class="ar">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 10 FINAL CTA ═════════════════════════════════════════ -->
+<section class="final" id="contact">
+  <div class="wrap">
+    <div class="rv">
+      <h2>If the problem is <span class="accent">interesting</span>, let's talk.</h2>
+      <a class="btn" href="diagnostic.html" data-cta="final">Tell me what's not working <span class="ar">&rarr;</span></a>
+      <p class="note">Free &middot; 30 to 45 minutes</p>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- ═══ FOOTER ═══ -->
 <footer class="foot">
   <div class="wrap">
-    <div class="foot-top">
-      <div class="foot-brand">
+    <div class="foot-in">
+      <div>
         <div class="brand">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" height="34" aria-hidden="true" focusable="false" style="flex-shrink:0;display:block">
-            <circle cx="25" cy="25" r="22" fill="#14130F"/>
-            <polygon points="25,10 38,25 25,40 12,25" fill="#A8341B"/>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" aria-hidden="true" focusable="false">
+            <circle cx="25" cy="25" r="22" fill="#E8E3D7"/>
+            <polygon points="25,10 38,25 25,40 12,25" class="mark"/>
             <circle cx="25" cy="25" r="4" fill="#14130F"/>
           </svg>
-          <div class="brand-name">ScaleBuz</div>
+          <span class="brand-t">
+            <span class="brand-n">ScaleBuz</span>
+            <span class="brand-s">by Rachit Verma</span>
+          </span>
         </div>
-        <p>Revenue architecture for B2B SaaS. Pipeline predictability is an architecture problem. We fix the architecture.</p>
+        <p class="foot-who"><b>B2B marketing and growth advisory.</b></p>
       </div>
-      <div>
-        <h6>Engagements</h6>
-        <ul>
-          <li><a href="#engagements">Revenue Clarity Audit</a></li>
-          <li><a href="#engagements">Pipeline Architecture Sprint</a></li>
-          <li><a href="#engagements">Strategic Growth Partnership</a></li>
-        </ul>
-      </div>
-      <div>
-        <h6>Company</h6>
-        <ul>
-          <li><a href="#cases">Case files</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h6>Direct</h6>
-        <ul>
-          <li><a href="mailto:rachit@scalebuz.co" style="color:var(--accent)">rachit@scalebuz.co</a></li>
-          <li><a href="tel:+919958978720">+91 9958978720</a></li>
-          <li><a href="https://calendly.com/vermarac1" target="_blank" rel="noopener">Book the diagnostic call →</a></li>
-          <li><a href="#engagements">See consulting engagements →</a></li>
-          <li><a href="#services">See targeted services →</a></li>
-        </ul>
+      <div class="foot-links">
+        <a href="#work">Work</a>
+        <a href="#thinking">How I Think</a>
+        <a href="#method">How I Work</a>
+        <a href="#operator">About</a>
+        <a href="diagnostic.html" data-cta="footer">Tell me what's not working</a>
+        <a href="https://www.linkedin.com/in/rachitverma1/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
-    <div class="foot-bottom">
-      <span>© 2026 ScaleBuz · scalebuz.co</span>
-      <span>India · UK · North America · Europe</span>
+    <div class="foot-base">
+      <span>&copy; 2026 ScaleBuz</span>
+      <span>Delhi NCR, India &middot; Working worldwide</span>
     </div>
   </div>
 </footer>
-
-<script>
-(function () {
-  // ── Nav scroll state ──
-  var nav = document.getElementById('nav');
-  var lastY = 0;
-  window.addEventListener('scroll', function () {
-    var y = window.scrollY;
-    nav.classList.toggle('scrolled', y > 20);
-    lastY = y;
-  }, { passive: true });
-
-  // ── Mobile hamburger ──
-  var toggle = document.getElementById('nav-toggle');
-  var mobileNav = document.getElementById('nav-mobile');
-
-  function closeMobileNav() {
-    mobileNav.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
-    mobileNav.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  toggle.addEventListener('click', function () {
-    var isOpen = mobileNav.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    mobileNav.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-  });
-
-  mobileNav.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', closeMobileNav);
-  });
-
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && mobileNav.classList.contains('open')) closeMobileNav();
-  });
-
-  // ── One consistent stagger: children rise in reading order, ~65ms apart ──
-  var STAGGER_MS = 65;
-  function applyStagger(selector) {
-    document.querySelectorAll(selector).forEach(function (group) {
-      Array.prototype.slice.call(group.children).forEach(function (child, i) {
-        if (!child.classList.contains('reveal')) child.classList.add('reveal');
-        child.style.setProperty('--reveal-delay', (i * STAGGER_MS) + 'ms');
-      });
-    });
-  }
-  ['.frame-grid', '.svc-grid', '.case-results', '.stats', '.team-grid', '.flow-nodes', '.who-list'].forEach(applyStagger);
-
-  // ── Scroll reveals via IntersectionObserver ──
-  if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -64px 0px' });
-
-    document.querySelectorAll('.reveal').forEach(function (el) {
-      observer.observe(el);
-    });
-  } else {
-    document.querySelectorAll('.reveal').forEach(function (el) {
-      el.classList.add('visible');
-    });
-  }
-
-  // ── Lead form: validation + submit, notifies rachit@scalebuz.co ──
-  var leadForm = document.getElementById('leadForm');
-  if (leadForm) {
-    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-    var FREE_EMAIL = /@(gmail|googlemail|yahoo|ymail|rocketmail|hotmail|outlook|live|msn|aol|icloud|me|mac|proton|protonmail|gmx|yandex|mail|rediffmail|inbox|zohomail)\./i;
-    var statusEl = document.getElementById('lf-status');
-
-    function fieldOf(input) { return input.closest('.field'); }
-    function setError(input, msg) {
-      var f = fieldOf(input);
-      f.classList.add('invalid');
-      var err = f.querySelector('.field-err');
-      if (err && msg) err.textContent = msg;
-    }
-    function clearErrors() {
-      leadForm.querySelectorAll('.field.invalid').forEach(function (f) { f.classList.remove('invalid'); });
-      statusEl.className = 'cta-form-status';
-      statusEl.textContent = '';
-    }
-
-    leadForm.addEventListener('input', function (e) {
-      var f = e.target.closest ? e.target.closest('.field') : null;
-      if (f) f.classList.remove('invalid');
-    });
-
-    leadForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      clearErrors();
-      var el = leadForm.elements;
-      var ok = true;
-
-      ['name', 'company', 'job_title'].forEach(function (n) {
-        if (!el[n].value.trim()) { setError(el[n], 'Required'); ok = false; }
-      });
-
-      var phone = el['phone'].value.trim();
-      if (!phone) { setError(el['phone'], 'Required'); ok = false; }
-      else if (phone.replace(/[^0-9]/g, '').length < 7) { setError(el['phone'], 'Enter a valid phone number'); ok = false; }
-
-      var email = el['email'].value.trim();
-      if (!email) { setError(el['email'], 'Required'); ok = false; }
-      else if (!EMAIL_RE.test(email)) { setError(el['email'], 'Enter a valid email'); ok = false; }
-      else if (FREE_EMAIL.test(email)) { setError(el['email'], 'Use your work email'); ok = false; }
-
-      if (!ok) {
-        var firstBad = leadForm.querySelector('.field.invalid .inp');
-        if (firstBad) firstBad.focus();
-        return;
-      }
-
-      var btn = leadForm.querySelector('.cta-form-btn');
-      var btnHTML = btn.innerHTML;
-      btn.disabled = true;
-      btn.textContent = 'Sending…';
-
-      var fd = new FormData(leadForm);
-      fd.set('subject', 'New diagnostic request — ' + el['company'].value.trim());
-
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: fd
-      })
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          if (data && (data.success === true || data.success === 'true')) {
-            leadForm.classList.add('sent');
-            statusEl.className = 'cta-form-status show ok';
-            statusEl.textContent = 'Thank you. Your details are with Rachit. Expect a reply within one business day.';
-          } else {
-            btn.disabled = false;
-            btn.innerHTML = btnHTML;
-            statusEl.className = 'cta-form-status show err';
-            statusEl.textContent = 'We could not send that just now. Please email rachit@scalebuz.co directly.';
-          }
-        })
-        .catch(function () {
-          btn.disabled = false;
-          btn.innerHTML = btnHTML;
-          statusEl.className = 'cta-form-status show err';
-          statusEl.textContent = 'Something went wrong. Please email rachit@scalebuz.co directly.';
-        });
-    });
-  }
-
-})();
-</script>
 
 </body>
 </html>

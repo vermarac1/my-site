@@ -1,0 +1,25 @@
+/* ScaleBuz colour test | EMERALD (test)
+   Only colour custom properties live here. Everything else is shared. */
+:root {
+  /* Neutrals: identical in both variants */
+  --paper:       #F7F2E8;
+  --paper-2:     #FBF8F1;
+  --paper-3:     #FBF8F1;
+  --nav-bg:      rgba(247,242,232,.88);
+  --ink:         #14130F;
+  --ink-2:       #2B2823;
+  --mute:        #6E695E;
+  --mute-2:      #736E62;
+  --control:     #8C8678;
+  --rule:        rgba(20,19,16,.10);
+  --rule-strong: rgba(20,19,16,.18);
+  --on-action:   #FFFFFF;
+
+  /* Experimental variable */
+  --accent:          #0B6B50;
+  --action:          #0B6B50;
+  --accent-on-dark:  #087F5B;
+  --accent-soft:     rgba(11,107,80,.09);
+  --detail:          #D4AF37;
+  --detail-on-dark:  #D4AF37;
+}
